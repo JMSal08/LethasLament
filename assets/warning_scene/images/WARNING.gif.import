@@ -1,0 +1,14 @@
+[remap]
+
+importer="import_gif_to_animated_texture"
+type="AnimatedTexture"
+uid="uid://coymwh12waf0b"
+path="res://.godot/imported/WARNING.gif-6081b63fe489067698378f2571af3f02.tres"
+
+[deps]
+
+source_file="res://assets/warning_scene/images/WARNING.gif"
+dest_files=["res://.godot/imported/WARNING.gif-6081b63fe489067698378f2571af3f02.tres"]
+
+[params]
+
