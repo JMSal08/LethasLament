@@ -13,7 +13,7 @@ config_version=5
 config/name="Letha's Lament"
 run/main_scene="uid://csibwcsmb4txf"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://n2gc2uds2fa7"
 
 [autoload]
 
