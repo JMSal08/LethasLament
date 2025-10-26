@@ -1,9 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://67o81w23mqil"]
+[gd_scene load_steps=8 format=3 uid="uid://dhaebwk3es6wb"]
 
-[ext_resource type="Texture2D" uid="uid://coymwh12waf0b" path="res://assets/warning_scene/images/WARNING.gif" id="1_04vbu"]
 [ext_resource type="Script" uid="uid://pxe5mpp3fwbt" path="res://scripts/warning_scene.gd" id="1_8qbk7"]
+[ext_resource type="Texture2D" uid="uid://deidur6ym313e" path="res://assets/warning_scene/images/frame0.png" id="1_m46my"]
+[ext_resource type="Texture2D" uid="uid://cdboaiup441ws" path="res://assets/warning_scene/images/frame1.png" id="2_4k238"]
+[ext_resource type="Texture2D" uid="uid://cknghqno5s8q4" path="res://assets/warning_scene/images/frame2.png" id="3_vkmdf"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8qbk7"]
+[sub_resource type="Animation" id="Animation_3ogsy"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WarningImg:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_m46my")]
+}
+
+[sub_resource type="Animation" id="Animation_60gab"]
+resource_name = "play"
+length = 1.5
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WarningImg:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_m46my"), ExtResource("2_4k238"), ExtResource("3_vkmdf")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_etjd8"]
+_data = {
+&"RESET": SubResource("Animation_3ogsy"),
+&"play": SubResource("Animation_60gab")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,18 +53,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8qbk7")
 
-[node name="Warning" type="Sprite2D" parent="."]
-position = Vector2(1180.5, 820.00006)
-scale = Vector2(1.0004237, 1.0000001)
-texture = ExtResource("1_04vbu")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_etjd8")
+}
 
-[node name="Overlay" type="Panel" parent="."]
+[node name="WarningImg" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_8qbk7")
+texture = ExtResource("1_m46my")
 
-[connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="gui_input" from="Overlay" to="." method="_on_overlay_gui_input"]
+[connection signal="gui_input" from="WarningImg" to="." method="_on_warning_img_gui_input"]

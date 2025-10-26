@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn83nqstmp0ks"]
+
+[ext_resource type="Script" uid="uid://cwwtx234ciskn" path="res://scripts/game_splash.gd" id="1_vfsl4"]
+[ext_resource type="Texture2D" uid="uid://n2gc2uds2fa7" path="res://assets/logo/LOGO.svg" id="1_xual5"]
+
+[sub_resource type="GDScript" id="GDScript_6dmd2"]
+script/source = "extends Sprite2D
+"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vfsl4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vfsl4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 2360.0
+offset_bottom = 1640.0
+color = Color(0, 0, 0, 1)
+
+[node name="GameLogo" type="Sprite2D" parent="."]
+position = Vector2(1180, 817)
+texture = ExtResource("1_xual5")
+script = SubResource("GDScript_6dmd2")
+
+[node name="Overlay" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 2360.0
+offset_bottom = 1640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vfsl4")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="gui_input" from="Overlay" to="." method="_on_overlay_gui_input"]
