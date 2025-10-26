@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://klal2iypyvkl"]
+[gd_scene load_steps=21 format=3 uid="uid://klal2iypyvkl"]
 
 [ext_resource type="FontFile" uid="uid://p8xw6f8ocjgt" path="res://fonts/Milkyway DEMO.ttf" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://du3kvhuqve5jo" path="res://assets/main_menu/Play normal state.png" id="3_rtw2f"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bywidqcm0mq66" path="res://assets/main_menu/Hit state play.png" id="4_oa1go"]
 [ext_resource type="Texture2D" uid="uid://cnt4lfy6d7rhu" path="res://assets/main_menu/Play hover state.png" id="5_tbmy8"]
 [ext_resource type="Texture2D" uid="uid://bgswmc1tvxsw7" path="res://assets/main_menu/Down state play.png" id="6_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://ck4w8y8dpafdo" path="res://assets/main_menu/Normal state how to play.png" id="7_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://bftrkjwty3lnw" path="res://assets/main_menu/Hit state how to play.png" id="8_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://cbqjnjdrsi0us" path="res://assets/main_menu/Hover state how to play.png" id="9_flqon"]
+[ext_resource type="Texture2D" uid="uid://c0o8usmpgh5a6" path="res://assets/main_menu/Down state how to play.png" id="10_rcqid"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5dd4i"]
 texture = ExtResource("3_rtw2f")
@@ -20,6 +24,20 @@ texture = ExtResource("5_tbmy8")
 texture = ExtResource("6_jk1qb")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rtw2f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ajci"]
+texture = ExtResource("7_5dd4i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7b55j"]
+texture = ExtResource("8_lgwnu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5pajh"]
+texture = ExtResource("9_flqon")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j7ex8"]
+texture = ExtResource("10_rcqid")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8gd2"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -71,7 +89,7 @@ theme_override_fonts/font = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 250
 text = "'"
 
-[node name="Button" type="Button" parent="Panel"]
+[node name="PlayButton" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 637.99994
 offset_top = 372.0
@@ -83,3 +101,16 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_lgwnu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_flqon")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_rcqid")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_rtw2f")
+
+[node name="InstructionsButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 730.0
+offset_top = 835.0
+offset_right = 2048.0
+offset_bottom = 1603.0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ajci")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7b55j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5pajh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_j7ex8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_a8gd2")
