@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Letha's Lament"
-run/main_scene="uid://csibwcsmb4txf"
+run/main_scene="uid://buj5wcdmixj52"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="uid://n2gc2uds2fa7"
 

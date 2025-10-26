@@ -16,6 +16,6 @@ offset_right = 2360.0
 offset_bottom = 1640.0
 color = Color(0, 0, 0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1180, 814)
+[node name="GameLogo" type="Sprite2D" parent="."]
+position = Vector2(1180, 817)
 texture = ExtResource("1_xual5")
