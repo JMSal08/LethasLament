@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://deom341qkdrhu"
+path="res://.godot/imported/godot-flash-demo.gif-c385d30961512d40c9d6d7627f46e9c0.tres"
+
+[deps]
+
+source_file="res://doc/godot-flash-demo.gif"
+dest_files=["res://.godot/imported/godot-flash-demo.gif-c385d30961512d40c9d6d7627f46e9c0.tres"]
+
+[params]
+
+frames_per_second=30

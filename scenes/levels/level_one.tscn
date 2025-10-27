@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://ykhjcfc6t1wk"]
+
+[ext_resource type="Texture2D" uid="uid://1ublh0ldakvc" path="res://assets/level_one/images/bg/level1bg.png" id="1_03iei"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 2360.0
+offset_bottom = 1640.0
+texture = ExtResource("1_03iei")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
