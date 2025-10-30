@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://hpspr31800ij" path="res://assets/main_menu/images/bg/frame2.png" id="14_a8gd2"]
 [ext_resource type="Texture2D" uid="uid://b4o7tx0r170kh" path="res://assets/main_menu/images/bg/frame3.png" id="15_hstxw"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8egab"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7b55j"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5dd4i"]
 texture = ExtResource("3_rtw2f")
@@ -99,6 +99,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_5pajh")
 
 [node name="Panel" type="Panel" parent="."]
@@ -108,7 +110,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_8egab")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7b55j")
 
 [node name="TitleLabel" type="Label" parent="Panel"]
 layout_mode = 1
@@ -143,6 +145,16 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 150
 text = "'"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 1732.0
+offset_top = 1587.0
+offset_right = 2346.0
+offset_bottom = 1658.0
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 50
+text = "Developed by BaldStar Studio"
 
 [node name="PlayButton" type="Button" parent="Panel"]
 layout_mode = 0
