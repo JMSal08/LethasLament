@@ -13,6 +13,9 @@ config_version=5
 config/name="Letha's Lament"
 run/main_scene="uid://buj5wcdmixj52"
 config/features=PackedStringArray("4.5", "GL Compatibility")
+boot_splash/bg_color=Color(0.70980394, 0.57254905, 0.76862746, 1)
+boot_splash/fullsize=false
+boot_splash/image="uid://bcicdo63gstm6"
 config/icon="uid://n2gc2uds2fa7"
 
 [autoload]

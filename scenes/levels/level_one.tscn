@@ -1,6 +1,97 @@
-[gd_scene load_steps=2 format=3 uid="uid://ykhjcfc6t1wk"]
+[gd_scene load_steps=18 format=3 uid="uid://ykhjcfc6t1wk"]
 
 [ext_resource type="Texture2D" uid="uid://1ublh0ldakvc" path="res://assets/level_one/images/bg/level1bg.png" id="1_03iei"]
+[ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/player/letha.gd" id="2_63ct5"]
+[ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/level_one/wall_hitboxes.gd" id="2_c6gv3"]
+[ext_resource type="Texture2D" uid="uid://cc3gt31qpqnto" path="res://assets/sprites/idle_spritesheet.png" id="3_5tayq"]
+[ext_resource type="Texture2D" uid="uid://b5d8dd44caygq" path="res://assets/sprites/down_spritesheet.png" id="4_5tayq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
+atlas = ExtResource("3_5tayq")
+region = Rect2(0, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsfy4"]
+atlas = ExtResource("3_5tayq")
+region = Rect2(1920, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w53h0"]
+atlas = ExtResource("3_5tayq")
+region = Rect2(3840, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_623cv"]
+atlas = ExtResource("3_5tayq")
+region = Rect2(5760, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6gdm"]
+atlas = ExtResource("3_5tayq")
+region = Rect2(7680, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1u8d"]
+atlas = ExtResource("3_5tayq")
+region = Rect2(9600, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ri5e"]
+atlas = ExtResource("4_5tayq")
+region = Rect2(0, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1057k"]
+atlas = ExtResource("4_5tayq")
+region = Rect2(1920, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxxkw"]
+atlas = ExtResource("4_5tayq")
+region = Rect2(3840, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajekx"]
+atlas = ExtResource("4_5tayq")
+region = Rect2(5760, 0, 1920, 1640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ri5e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6gv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsfy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w53h0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_623cv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6gdm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1u8d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ri5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1057k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxxkw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajekx")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5tayq"]
+radius = 25.0
+height = 96.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,8 +100,36 @@ offset_right = 2360.0
 offset_bottom = 1640.0
 texture = ExtResource("1_03iei")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="wall_hitboxes" type="Area2D" parent="."]
+script = ExtResource("2_c6gv3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="wall_hitboxes"]
+polygon = PackedVector2Array(-10, 454, 37, 455, 37, 46, 442, 46, 442, 502, 480, 502, 480, 319, 774, 319, 774, 182, 480, 182, 480, 46, 2323, 46, 2323, 683, 2213, 683, 2213, 455, 2175, 455, 2175, 730, 2323, 730, 2322, 1230, 2028, 1230, 2028, 1465, 2139, 1464, 2139, 1367, 2323, 1367, 2323, 1594, 1918, 1594, 1918, 1094, 2213, 1094, 2212, 865, 2065, 865, 2065, 455, 2028, 455, 2028, 912, 2175, 912, 2175, 1047, 1918, 1047, 1918, 319, 2213, 319, 2213, 181, 884, 181, 882, 320, 1107, 319, 1107, 229, 1216, 229, 1216, 455, 590, 455, 590, 638, 258, 638, 258, 410, 332, 410, 332, 181, 148, 182, 148, 319, 221, 320, 221, 637, 147, 637, 147, 684, 590, 684, 590, 820, 369, 820, 369, 866, 590, 866, 590, 1002, 147, 1002, 147, 1276, 775, 1276, 774, 1002, 737, 1002, 737, 1184, 185, 1184, 185, 1049, 627, 1048, 627, 502, 1254, 502, 1254, 319, 1880, 319, 1880, 637, 1733, 637, 1733, 821, 1880, 821, 1880, 956, 1733, 956, 1733, 1276, 1880, 1276, 1880, 1594, 1476, 1594, 1475, 1412, 1327, 1412, 1327, 1458, 1438, 1458, 1438, 1594, 1070, 1594, 1070, 1411, 1032, 1411, 1032, 1594, 628, 1594, 628, 1413, 147, 1412, 147, 1459, 589, 1459, 589, 1594, 37, 1594, 37, 866, 258, 866, 258, 819, 37, 819, 37, 501, 111, 501, 110, 456, 0, 455, -4, 1651, 2374, 1650, 2373, -10, -16, -8, -15, 450)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="wall_hitboxes"]
+polygon = PackedVector2Array(1364, 455, 1770, 455, 1770, 502, 1623, 502, 1623, 1094, 1585, 1094, 1585, 502, 1364, 502)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="wall_hitboxes"]
+polygon = PackedVector2Array(737, 1412, 737, 1459, 922, 1459, 922, 1276, 1180, 1276, 1180, 1459, 1217, 1459, 1217, 1276, 1328, 1276, 1328, 1229, 923, 1230, 922, 1002, 885, 1002, 885, 1412)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="wall_hitboxes"]
+polygon = PackedVector2Array(1770, 1412, 1623, 1412, 1623, 1229, 1476, 1229, 1476, 637, 1032, 637, 1032, 684, 1438, 684, 1438, 1276, 1585, 1276, 1586, 1458, 1770, 1459)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="wall_hitboxes"]
+polygon = PackedVector2Array(737, 637, 775, 637, 775, 820, 885, 820, 885, 637, 922, 637, 923, 819, 1070, 819, 1070, 1047, 1290, 1047, 1290, 865, 1180, 865, 1180, 820, 1327, 820, 1328, 1094, 1032, 1094, 1032, 866, 737, 866)
+
+[node name="Letha" type="CharacterBody2D" parent="."]
+position = Vector2(92, 112)
+script = ExtResource("2_63ct5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Letha"]
+scale = Vector2(0.25, 0.239)
+sprite_frames = SubResource("SpriteFrames_8ri5e")
+animation = &"down"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letha"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_5tayq")
+
+[connection signal="body_entered" from="wall_hitboxes" to="wall_hitboxes" method="_on_body_entered"]
