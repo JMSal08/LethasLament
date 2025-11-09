@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://klal2iypyvkl"]
+[gd_scene load_steps=32 format=3 uid="uid://klal2iypyvkl"]
 
 [ext_resource type="Script" uid="uid://bi5fw3nwdkiiq" path="res://scripts/main_menu.gd" id="1_7b55j"]
 [ext_resource type="FontFile" uid="uid://p8xw6f8ocjgt" path="res://fonts/Milkyway DEMO.ttf" id="1_l6cm7"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dfpk1yr4bivmx" path="res://assets/main_menu/images/bg/frame1.png" id="13_j7ex8"]
 [ext_resource type="Texture2D" uid="uid://hpspr31800ij" path="res://assets/main_menu/images/bg/frame2.png" id="14_a8gd2"]
 [ext_resource type="Texture2D" uid="uid://b4o7tx0r170kh" path="res://assets/main_menu/images/bg/frame3.png" id="15_hstxw"]
+[ext_resource type="FontFile" uid="uid://celc3h3f87gce" path="res://fonts/Super Joyful.ttf" id="16_5pajh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7b55j"]
 
@@ -85,6 +86,10 @@ _data = {
 &"play": SubResource("Animation_svtp6")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7ex8"]
+bg_color = Color(0.34583956, 0.24100146, 0.39143273, 1)
+corner_radius_top_left = 10
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -148,13 +153,13 @@ text = "'"
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 1732.0
-offset_top = 1587.0
-offset_right = 2346.0
-offset_bottom = 1658.0
-theme_override_fonts/font = ExtResource("1_l6cm7")
+offset_left = 1933.0
+offset_top = 1578.0
+offset_right = 2361.0
+offset_bottom = 1649.0
+theme_override_fonts/font = ExtResource("16_5pajh")
 theme_override_font_sizes/font_size = 50
-text = "Developed by BaldStar Studio"
+text = "(c) BaldStar Studios"
 
 [node name="PlayButton" type="Button" parent="Panel"]
 layout_mode = 0
@@ -187,5 +192,74 @@ libraries = {
 &"": SubResource("AnimationLibrary_1dfpl")
 }
 
+[node name="Instructions" type="Panel" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.47058824)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -775.0
+offset_top = -623.0
+offset_right = 775.0
+offset_bottom = 623.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j7ex8")
+
+[node name="InsTitle" type="Label" parent="Instructions"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 23.0
+offset_right = -734.0
+offset_bottom = -1075.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 150
+text = "Instructions"
+
+[node name="InsContent" type="Label" parent="Instructions"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -54.0
+offset_right = 355.5
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("16_5pajh")
+theme_override_font_sizes/font_size = 100
+text = "1. Please don't hit walls UwU
+
+2. Get the damn letters bih
+
+3. Placeholder"
+
+[node name="InsClose" type="Button" parent="Instructions"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 664.0
+offset_top = 1078.0
+offset_right = -663.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("16_5pajh")
+theme_override_font_sizes/font_size = 100
+text = "When knee surgery is tomorrow"
+
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="Panel/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Panel/InstructionsButton" to="." method="_on_instructions_button_pressed"]
+[connection signal="pressed" from="Instructions/InsClose" to="." method="_on_ins_close_pressed"]

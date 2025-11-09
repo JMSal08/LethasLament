@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ykhjcfc6t1wk"]
+[gd_scene load_steps=19 format=3 uid="uid://ykhjcfc6t1wk"]
 
 [ext_resource type="Texture2D" uid="uid://1ublh0ldakvc" path="res://assets/level_one/images/bg/level1bg.png" id="1_03iei"]
 [ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/player/letha.gd" id="2_63ct5"]
@@ -89,9 +89,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5tayq"]
-radius = 5.0
-height = 24.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c6gv3"]
+radius = 9.999985
+height = 34.545456
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vsfy4"]
+radius = 25.454544
+height = 50.90909
 
 [node name="Node2D" type="Node2D"]
 
@@ -119,18 +123,22 @@ polygon = PackedVector2Array(1770, 1412, 1623, 1412, 1623, 1229, 1476, 1229, 147
 polygon = PackedVector2Array(737, 637, 775, 637, 775, 820, 885, 820, 885, 637, 922, 637, 923, 819, 1070, 819, 1070, 1047, 1290, 1047, 1290, 865, 1180, 865, 1180, 820, 1327, 820, 1328, 1094, 1032, 1094, 1032, 866, 737, 866)
 
 [node name="Letha" type="CharacterBody2D" parent="."]
-position = Vector2(92, 112)
+position = Vector2(91, 123)
 script = ExtResource("2_63ct5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Letha"]
-scale = Vector2(0.25, 0.239)
+scale = Vector2(0.35, 0.335)
 sprite_frames = SubResource("SpriteFrames_8ri5e")
 animation = &"down"
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Letha"]
-position = Vector2(-1, 42)
+[node name="HeadHitbox" type="CollisionShape2D" parent="Letha"]
+position = Vector2(-0.9090891, 56.363632)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_5tayq")
+shape = SubResource("CapsuleShape2D_c6gv3")
+
+[node name="FeetHitbox" type="CollisionShape2D" parent="Letha"]
+position = Vector2(0, -24.545454)
+shape = SubResource("CapsuleShape2D_vsfy4")
 
 [connection signal="body_entered" from="wall_hitboxes" to="wall_hitboxes" method="_on_body_entered"]
