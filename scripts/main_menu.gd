@@ -1,6 +1,7 @@
 extends Control
 
 @onready var AnimPlayer = $AnimationPlayer
+@onready var InsAnimPlayer = $InstructionsAnimation
 @onready var Instructions = $Instructions
 
 func _on_ready() -> void:
@@ -12,8 +13,8 @@ func _on_play_button_pressed() -> void:
 
 
 func _on_instructions_button_pressed() -> void:
-	Instructions.visible = true
+	InsAnimPlayer.play("show_instructions")
 
 
 func _on_ins_close_pressed() -> void:
-	Instructions.visible = false
+	InsAnimPlayer.play_backwards("show_instructions")
