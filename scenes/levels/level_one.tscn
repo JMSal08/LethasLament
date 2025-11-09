@@ -90,8 +90,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5tayq"]
-radius = 25.0
-height = 96.0
+radius = 5.0
+height = 24.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -129,7 +129,8 @@ animation = &"down"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Letha"]
-position = Vector2(0, 1)
+position = Vector2(-1, 42)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_5tayq")
 
 [connection signal="body_entered" from="wall_hitboxes" to="wall_hitboxes" method="_on_body_entered"]
