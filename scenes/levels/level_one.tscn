@@ -132,12 +132,12 @@ sprite_frames = SubResource("SpriteFrames_8ri5e")
 animation = &"down"
 autoplay = "default"
 
-[node name="HeadHitbox" type="CollisionShape2D" parent="Letha"]
+[node name="FeetHitbox" type="CollisionShape2D" parent="Letha"]
 position = Vector2(-0.9090891, 56.363632)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_c6gv3")
 
-[node name="FeetHitbox" type="CollisionShape2D" parent="Letha"]
+[node name="HeadHitbox" type="CollisionShape2D" parent="Letha"]
 position = Vector2(0, -24.545454)
 shape = SubResource("CapsuleShape2D_vsfy4")
 
