@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ykhjcfc6t1wk"]
+[gd_scene load_steps=27 format=3 uid="uid://ykhjcfc6t1wk"]
 
 [ext_resource type="Texture2D" uid="uid://1ublh0ldakvc" path="res://assets/levels/level_one/images/bg/level1bg.png" id="1_03iei"]
 [ext_resource type="Script" uid="uid://bg2e7kc6rwp51" path="res://scripts/levels/level_one/level_one.gd" id="1_vsfy4"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d0spsrcqloris" path="res://assets/letters/C.png" id="7_w53h0"]
 [ext_resource type="Texture2D" uid="uid://d18kv5dr0oe1r" path="res://assets/letters/A.png" id="8_623cv"]
 [ext_resource type="Texture2D" uid="uid://co0ngm2gkv3yo" path="res://assets/letters/T.png" id="9_u6gdm"]
+[ext_resource type="PackedScene" uid="uid://cmf375skpn68q" path="res://scenes/misc/level_one_finish.tscn" id="10_a1u8d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
 atlas = ExtResource("3_5tayq")
@@ -116,7 +117,6 @@ offset_bottom = 1640.0
 texture = ExtResource("1_03iei")
 
 [node name="WallHitboxes" type="Area2D" parent="."]
-visible = false
 script = ExtResource("2_c6gv3")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallHitboxes"]
@@ -192,6 +192,9 @@ position = Vector2(1186, 951)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FinishPoint"]
 polygon = PackedVector2Array(-120, -85, 107, -86, 106, 98, -119, 97)
+
+[node name="LevelOneFinish" parent="." instance=ExtResource("10_a1u8d")]
+visible = false
 
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
 [connection signal="body_entered" from="Letter_C" to="." method="_on_letter_c_body_entered"]

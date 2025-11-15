@@ -113,6 +113,9 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_a8gd2"]
+resource_name = "alt_show_instructions"
+
 [sub_resource type="Animation" id="Animation_j7ex8"]
 resource_name = "show_instructions"
 length = 0.7
@@ -140,9 +143,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.99215686)]
 }
-
-[sub_resource type="Animation" id="Animation_a8gd2"]
-resource_name = "alt_show_instructions"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a8gd2"]
 _data = {
@@ -307,11 +307,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("16_5pajh")
 theme_override_font_sizes/font_size = 100
-text = "1. Placeholder
+text = "1. Dont touch The walls!
 
-2. Placeholder
+2. Collect the letters
 
-3. Placeholder"
+3. Guess what's in the picture"
 
 [node name="InsClose" type="Button" parent="Instructions"]
 layout_mode = 1
@@ -326,7 +326,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("16_5pajh")
 theme_override_font_sizes/font_size = 100
-text = "Placeholder"
+text = "Close"
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="Panel/PlayButton" to="." method="_on_play_button_pressed"]

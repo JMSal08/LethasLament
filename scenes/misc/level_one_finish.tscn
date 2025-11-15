@@ -1,21 +1,25 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmf375skpn68q"]
+[gd_scene load_steps=10 format=3 uid="uid://cmf375skpn68q"]
 
 [ext_resource type="PackedScene" uid="uid://dd16j3wotjuev" path="res://scenes/misc/slot.tscn" id="1_0qt6b"]
 [ext_resource type="Script" uid="uid://oabudmsfacff" path="res://scripts/levels/misc/level_one_finish.gd" id="1_40mwt"]
+[ext_resource type="Texture2D" uid="uid://1ublh0ldakvc" path="res://assets/levels/level_one/images/bg/level1bg.png" id="2_1jbeg"]
 [ext_resource type="Texture2D" uid="uid://co0ngm2gkv3yo" path="res://assets/letters/T.png" id="2_40mwt"]
 [ext_resource type="Texture2D" uid="uid://d18kv5dr0oe1r" path="res://assets/letters/A.png" id="3_1jbeg"]
 [ext_resource type="Texture2D" uid="uid://d0spsrcqloris" path="res://assets/letters/C.png" id="4_tpcii"]
 [ext_resource type="Texture2D" uid="uid://bflnj0qjginvh" path="res://assets/levels/level_one/images/Meow.jpg" id="5_cs0th"]
 [ext_resource type="FontFile" uid="uid://celc3h3f87gce" path="res://fonts/Super Joyful.ttf" id="6_761b6"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tpcii"]
+texture = ExtResource("2_1jbeg")
+
 [node name="LevelOneFinish" type="Node2D"]
 script = ExtResource("1_40mwt")
 
 [node name="Panel" type="Panel" parent="."]
-modulate = Color(1, 1, 1, 0.47058824)
 offset_right = 2360.0
 offset_bottom = 1640.0
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tpcii")
 
 [node name="Letter_T" parent="." instance=ExtResource("1_0qt6b")]
 offset_left = 1700.0
