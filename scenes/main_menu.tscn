@@ -311,7 +311,9 @@ text = "1. Dont touch The walls!
 
 2. Collect the letters
 
-3. Guess what's in the picture"
+3. Go to the middle of the map!
+
+4. Guess what's in the picture"
 
 [node name="InsClose" type="Button" parent="Instructions"]
 layout_mode = 1

@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cys4gmwgyiau"]
 
 [ext_resource type="Texture2D" uid="uid://bbm13eqscmiex" path="res://assets/levels/level_two/images/level2bg.png" id="1_nei2a"]
-[ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/player/letha.gd" id="2_dyh5b"]
+[ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://assets/levels/level_one/images/bg/letha.gd" id="2_dyh5b"]
 [ext_resource type="Texture2D" uid="uid://cc3gt31qpqnto" path="res://assets/sprites/idle_spritesheet.png" id="3_ivcj6"]
 [ext_resource type="Texture2D" uid="uid://b5d8dd44caygq" path="res://assets/sprites/down_spritesheet.png" id="4_q0tex"]
 
