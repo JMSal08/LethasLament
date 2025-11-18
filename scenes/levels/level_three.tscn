@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/misc/letha.gd" id="2_4umhc"]
 [ext_resource type="Texture2D" uid="uid://cc3gt31qpqnto" path="res://assets/sprites/idle_spritesheet.png" id="3_7ry6i"]
 [ext_resource type="Texture2D" uid="uid://b5d8dd44caygq" path="res://assets/sprites/down_spritesheet.png" id="4_vmov0"]
-[ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/level_one/wall_hitboxes.gd" id="5_7s1bx"]
+[ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/misc/wall_hitboxes.gd" id="5_7s1bx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
 atlas = ExtResource("3_7ry6i")
@@ -130,5 +130,29 @@ target_loc = Vector2(54, 244)
 
 [node name="WallGroupOne" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(0, 319, 111, 319, 111, 136, 148, 136, 148, 547, 111, 547, 111, 364, 0, 364)
+
+[node name="WallGroupTwo" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(0, 1002, 111, 1002, 111, 729, 147, 729, 147, 1048, 0, 1048)
+
+[node name="WallGroupThree" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(111, 1185, 147, 1185, 147, 1321, 111, 1321)
+
+[node name="WallGroupFour" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(111, 1458, 406, 1458, 406, 1367, 442, 1367, 442, 1503, 111, 1503)
+
+[node name="WallGroupFive" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(258, 137, 553, 137, 553, -9, 590, -9, 590, 182, 258, 182)
+
+[node name="WallGroupSix" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(258, 546, 258, 319, 590, 319, 590, 364, 295, 365, 295, 546)
+
+[node name="WallGroupSeven" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(259, 684, 406, 684, 406, 501, 590, 501, 590, 547, 442, 547, 442, 729, 259, 729)
+
+[node name="WallGroupEight" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(258, 866, 553, 866, 553, 684, 590, 684, 590, 911, 443, 911, 443, 1048, 406, 1048, 406, 911, 258, 911)
+
+[node name="WallGroupNine" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(258, 1048, 295, 1048, 295, 1185, 553, 1185, 553, 1047, 590, 1047, 590, 1230, 295, 1230, 295, 1321, 258, 1321)
 
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]

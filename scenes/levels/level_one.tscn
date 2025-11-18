@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://1ublh0ldakvc" path="res://assets/levels/level_one/images/bg/level1bg.png" id="1_03iei"]
 [ext_resource type="Script" uid="uid://bg2e7kc6rwp51" path="res://scripts/levels/level_one/level_one.gd" id="1_vsfy4"]
 [ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/misc/letha.gd" id="2_63ct5"]
-[ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/level_one/wall_hitboxes.gd" id="2_c6gv3"]
+[ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/misc/wall_hitboxes.gd" id="2_c6gv3"]
 [ext_resource type="Texture2D" uid="uid://cc3gt31qpqnto" path="res://assets/sprites/idle_spritesheet.png" id="3_5tayq"]
 [ext_resource type="Texture2D" uid="uid://b5d8dd44caygq" path="res://assets/sprites/down_spritesheet.png" id="4_5tayq"]
 [ext_resource type="Texture2D" uid="uid://d0spsrcqloris" path="res://assets/letters/C.png" id="7_w53h0"]

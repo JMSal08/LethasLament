@@ -1,11 +1,12 @@
-[gd_scene load_steps=22 format=3 uid="uid://cys4gmwgyiau"]
+[gd_scene load_steps=23 format=3 uid="uid://cys4gmwgyiau"]
 
+[ext_resource type="Script" uid="uid://b8k8fl2kcvis8" path="res://scripts/levels/level_two/level_two.gd" id="1_gqryv"]
 [ext_resource type="Texture2D" uid="uid://bbm13eqscmiex" path="res://assets/levels/level_two/images/bg/level2bg.png" id="1_nei2a"]
 [ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/misc/letha.gd" id="2_dyh5b"]
 [ext_resource type="Texture2D" uid="uid://6yw6nyavjbk7" path="res://assets/levels/level_two/images/bg/Lv2MapFix.png" id="2_ivcj6"]
 [ext_resource type="Texture2D" uid="uid://cc3gt31qpqnto" path="res://assets/sprites/idle_spritesheet.png" id="3_ivcj6"]
 [ext_resource type="Texture2D" uid="uid://b5d8dd44caygq" path="res://assets/sprites/down_spritesheet.png" id="4_q0tex"]
-[ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/level_one/wall_hitboxes.gd" id="6_ivcj6"]
+[ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/misc/wall_hitboxes.gd" id="6_ivcj6"]
 [ext_resource type="Texture2D" uid="uid://b2cyi1r5hbmmb" path="res://assets/misc/tree.png" id="7_ivkd0"]
 [ext_resource type="Texture2D" uid="uid://d1liulwxkddc8" path="res://assets/misc/bush.png" id="8_gqryv"]
 
@@ -101,6 +102,7 @@ radius = 25.454544
 height = 97.5
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_gqryv")
 
 [node name="MapTexture" type="TextureRect" parent="."]
 offset_right = 2360.0
