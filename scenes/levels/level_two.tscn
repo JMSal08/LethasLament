@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://cys4gmwgyiau"]
+[gd_scene load_steps=20 format=3 uid="uid://cys4gmwgyiau"]
 
 [ext_resource type="Texture2D" uid="uid://bbm13eqscmiex" path="res://assets/levels/level_two/images/level2bg.png" id="1_nei2a"]
 [ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://assets/levels/level_one/images/bg/letha.gd" id="2_dyh5b"]
 [ext_resource type="Texture2D" uid="uid://6yw6nyavjbk7" path="res://assets/levels/level_two/images/Lv2MapFix.png" id="2_ivcj6"]
 [ext_resource type="Texture2D" uid="uid://cc3gt31qpqnto" path="res://assets/sprites/idle_spritesheet.png" id="3_ivcj6"]
 [ext_resource type="Texture2D" uid="uid://b5d8dd44caygq" path="res://assets/sprites/down_spritesheet.png" id="4_q0tex"]
+[ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/level_one/wall_hitboxes.gd" id="6_ivcj6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
 atlas = ExtResource("3_ivcj6")
@@ -131,3 +132,14 @@ shape = SubResource("CapsuleShape2D_dyh5b")
 [node name="HeadHitbox" type="CollisionShape2D" parent="Letha"]
 position = Vector2(0, -8.749996)
 shape = SubResource("CapsuleShape2D_ivcj6")
+
+[node name="WallHitboxes" type="Area2D" parent="."]
+script = ExtResource("6_ivcj6")
+target_loc = Vector2(360, 830)
+
+[node name="TopOuterWalls" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(0, 683, 0, 0, 2360, 0, 2360, 729, 1991, 729, 1991, 775, 1954, 775, 1954, 683, 2287, 683, 2286, 45, 110, 45, 110, 639, 442, 638, 442, 729, 406, 729, 406, 683)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallHitboxes"]
+
+[connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
