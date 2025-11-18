@@ -95,12 +95,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c6gv3"]
-radius = 9.999985
-height = 34.545456
+radius = 12.5
+height = 35.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vsfy4"]
 radius = 25.454544
-height = 50.90909
+height = 97.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sp7xj"]
 
@@ -136,6 +136,7 @@ polygon = PackedVector2Array(737, 637, 775, 637, 775, 820, 885, 820, 885, 637, 9
 
 [node name="Letha" type="CharacterBody2D" parent="."]
 position = Vector2(91, 123)
+scale = Vector2(0.8, 0.8)
 script = ExtResource("2_63ct5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Letha"]
@@ -145,12 +146,12 @@ animation = &"down"
 autoplay = "default"
 
 [node name="FeetHitbox" type="CollisionShape2D" parent="Letha"]
-position = Vector2(-0.9090891, 56.363632)
+position = Vector2(8.940697e-07, 51.249992)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_c6gv3")
 
 [node name="HeadHitbox" type="CollisionShape2D" parent="Letha"]
-position = Vector2(0, -24.545454)
+position = Vector2(0, -8.749996)
 shape = SubResource("CapsuleShape2D_vsfy4")
 
 [node name="Letter_C" type="Area2D" parent="."]
