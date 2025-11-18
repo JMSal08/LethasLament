@@ -1,0 +1,134 @@
+[gd_scene load_steps=19 format=3 uid="uid://dpmr1l5ci1ftq"]
+
+[ext_resource type="Texture2D" uid="uid://cr1t447xq4oqa" path="res://assets/levels/level_three/images/bg/level3bg.png" id="1_y0l6c"]
+[ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/misc/letha.gd" id="2_4umhc"]
+[ext_resource type="Texture2D" uid="uid://cc3gt31qpqnto" path="res://assets/sprites/idle_spritesheet.png" id="3_7ry6i"]
+[ext_resource type="Texture2D" uid="uid://b5d8dd44caygq" path="res://assets/sprites/down_spritesheet.png" id="4_vmov0"]
+[ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/level_one/wall_hitboxes.gd" id="5_7s1bx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
+atlas = ExtResource("3_7ry6i")
+region = Rect2(0, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsfy4"]
+atlas = ExtResource("3_7ry6i")
+region = Rect2(1920, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w53h0"]
+atlas = ExtResource("3_7ry6i")
+region = Rect2(3840, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_623cv"]
+atlas = ExtResource("3_7ry6i")
+region = Rect2(5760, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6gdm"]
+atlas = ExtResource("3_7ry6i")
+region = Rect2(7680, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1u8d"]
+atlas = ExtResource("3_7ry6i")
+region = Rect2(9600, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ri5e"]
+atlas = ExtResource("4_vmov0")
+region = Rect2(0, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1057k"]
+atlas = ExtResource("4_vmov0")
+region = Rect2(1920, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxxkw"]
+atlas = ExtResource("4_vmov0")
+region = Rect2(3840, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajekx"]
+atlas = ExtResource("4_vmov0")
+region = Rect2(5760, 0, 1920, 1640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbu4w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6gv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsfy4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w53h0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_623cv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6gdm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1u8d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ri5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1057k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxxkw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajekx")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s458d"]
+radius = 12.5
+height = 35.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_31lil"]
+radius = 25.454544
+height = 97.5
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MapTexture" type="TextureRect" parent="."]
+offset_right = 2360.0
+offset_bottom = 1640.0
+texture = ExtResource("1_y0l6c")
+
+[node name="Letha" type="CharacterBody2D" parent="."]
+position = Vector2(54.000004, 244)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("2_4umhc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Letha"]
+scale = Vector2(0.35, 0.335)
+sprite_frames = SubResource("SpriteFrames_jbu4w")
+animation = &"down"
+autoplay = "default"
+
+[node name="FeetHitbox" type="CollisionShape2D" parent="Letha"]
+position = Vector2(8.940697e-07, 51.249992)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_s458d")
+
+[node name="HeadHitbox" type="CollisionShape2D" parent="Letha"]
+position = Vector2(0, -8.749996)
+shape = SubResource("CapsuleShape2D_31lil")
+
+[node name="WallHitboxes" type="Area2D" parent="."]
+script = ExtResource("5_7s1bx")
+target_loc = Vector2(54, 244)
+
+[node name="WallGroupOne" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(0, 319, 111, 319, 111, 136, 148, 136, 148, 547, 111, 547, 111, 364, 0, 364)
+
+[connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
