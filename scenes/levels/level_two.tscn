@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cys4gmwgyiau"]
+[gd_scene load_steps=27 format=3 uid="uid://cys4gmwgyiau"]
 
 [ext_resource type="Script" uid="uid://b8k8fl2kcvis8" path="res://scripts/levels/level_two/level_two.gd" id="1_gqryv"]
 [ext_resource type="Texture2D" uid="uid://bbm13eqscmiex" path="res://assets/levels/level_two/images/bg/level2bg.png" id="1_nei2a"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d1liulwxkddc8" path="res://assets/misc/bush.png" id="8_gqryv"]
 [ext_resource type="Texture2D" uid="uid://d0spsrcqloris" path="res://assets/letters/C.png" id="10_chx1n"]
 [ext_resource type="Texture2D" uid="uid://d27p1lwllw2u5" path="res://assets/letters/O.png" id="11_oei0b"]
+[ext_resource type="PackedScene" uid="uid://cgjr6mpdvfbks" path="res://scenes/misc/level_two_finish.tscn" id="12_oei0b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
 atlas = ExtResource("3_ivcj6")
@@ -242,7 +243,7 @@ scale = Vector2(20.04, 20.04)
 shape = SubResource("CircleShape2D_sp7xj")
 
 [node name="Letter_O" type="Area2D" parent="."]
-position = Vector2(260, 1566)
+position = Vector2(260, 1566.0001)
 scale = Vector2(0.3, 0.3)
 
 [node name="Sprite2D" type="Sprite2D" parent="Letter_O"]
@@ -253,6 +254,16 @@ position = Vector2(13.333333, -66.666664)
 scale = Vector2(20.04, 20.04)
 shape = SubResource("CircleShape2D_sp7xj")
 
+[node name="LevelTwoFinish" parent="." instance=ExtResource("12_oei0b")]
+visible = false
+
+[node name="FinishPoint" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FinishPoint"]
+polygon = PackedVector2Array(1069, 729, 1327, 729, 1327, 911, 1069, 910)
+
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
 [connection signal="body_entered" from="Letter_C" to="." method="_on_letter_c_body_entered"]
 [connection signal="body_entered" from="Letter_O" to="." method="_on_letter_o_body_entered"]
+[connection signal="body_entered" from="FinishPoint" to="." method="_on_finish_point_body_entered"]
