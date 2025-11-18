@@ -1,8 +1,8 @@
 [gd_scene load_steps=22 format=3 uid="uid://cys4gmwgyiau"]
 
-[ext_resource type="Texture2D" uid="uid://bbm13eqscmiex" path="res://assets/levels/level_two/images/level2bg.png" id="1_nei2a"]
-[ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://assets/levels/level_one/images/bg/letha.gd" id="2_dyh5b"]
-[ext_resource type="Texture2D" uid="uid://6yw6nyavjbk7" path="res://assets/levels/level_two/images/Lv2MapFix.png" id="2_ivcj6"]
+[ext_resource type="Texture2D" uid="uid://bbm13eqscmiex" path="res://assets/levels/level_two/images/bg/level2bg.png" id="1_nei2a"]
+[ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/misc/letha.gd" id="2_dyh5b"]
+[ext_resource type="Texture2D" uid="uid://6yw6nyavjbk7" path="res://assets/levels/level_two/images/bg/Lv2MapFix.png" id="2_ivcj6"]
 [ext_resource type="Texture2D" uid="uid://cc3gt31qpqnto" path="res://assets/sprites/idle_spritesheet.png" id="3_ivcj6"]
 [ext_resource type="Texture2D" uid="uid://b5d8dd44caygq" path="res://assets/sprites/down_spritesheet.png" id="4_q0tex"]
 [ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/level_one/wall_hitboxes.gd" id="6_ivcj6"]
