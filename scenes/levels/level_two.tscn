@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cys4gmwgyiau"]
+[gd_scene load_steps=26 format=3 uid="uid://cys4gmwgyiau"]
 
 [ext_resource type="Script" uid="uid://b8k8fl2kcvis8" path="res://scripts/levels/level_two/level_two.gd" id="1_gqryv"]
 [ext_resource type="Texture2D" uid="uid://bbm13eqscmiex" path="res://assets/levels/level_two/images/bg/level2bg.png" id="1_nei2a"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/misc/wall_hitboxes.gd" id="6_ivcj6"]
 [ext_resource type="Texture2D" uid="uid://b2cyi1r5hbmmb" path="res://assets/misc/tree.png" id="7_ivkd0"]
 [ext_resource type="Texture2D" uid="uid://d1liulwxkddc8" path="res://assets/misc/bush.png" id="8_gqryv"]
+[ext_resource type="Texture2D" uid="uid://d0spsrcqloris" path="res://assets/letters/C.png" id="10_chx1n"]
+[ext_resource type="Texture2D" uid="uid://d27p1lwllw2u5" path="res://assets/letters/O.png" id="11_oei0b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
 atlas = ExtResource("3_ivcj6")
@@ -95,11 +97,12 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dyh5b"]
 radius = 12.5
-height = 35.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ivcj6"]
 radius = 25.454544
 height = 97.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sp7xj"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_gqryv")
@@ -129,7 +132,7 @@ animation = &"down"
 autoplay = "default"
 
 [node name="FeetHitbox" type="CollisionShape2D" parent="Letha"]
-position = Vector2(8.940697e-07, 51.249992)
+position = Vector2(8.940697e-07, 51.66666)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_dyh5b")
 
@@ -169,60 +172,87 @@ polygon = PackedVector2Array(738, 182, 1401, 182, 1402, 274, 1217, 274, 1217, 31
 [node name="WallGroupSeven" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(1807, 319, 1807, 273, 2065, 273, 2065, 456, 1733, 455, 1733, 775, 1696, 775, 1696, 592, 1585, 592, 1585, 1230, 1438, 1230, 1438, 1184, 1549, 1184, 1549, 1093, 885, 1093, 885, 865, 922, 865, 922, 1048, 1438, 1048, 1438, 865, 1475, 865, 1475, 1048, 1549, 1048, 1549, 546, 1696, 546, 1696, 410, 2028, 410, 2028, 319)
 
-[node name="Tree" type="Sprite2D" parent="."]
+[node name="Decorations" type="CanvasGroup" parent="."]
+
+[node name="Tree" type="Sprite2D" parent="Decorations"]
 position = Vector2(339, 1230)
 scale = Vector2(0.24887761, 0.24887761)
 texture = ExtResource("7_ivkd0")
 
-[node name="Tree2" type="Sprite2D" parent="."]
+[node name="Tree2" type="Sprite2D" parent="Decorations"]
 position = Vector2(2289, 824)
 scale = Vector2(0.24887761, 0.24887761)
 texture = ExtResource("7_ivkd0")
 
-[node name="Tree3" type="Sprite2D" parent="."]
+[node name="Tree3" type="Sprite2D" parent="Decorations"]
 position = Vector2(160.00003, 355.00012)
 scale = Vector2(0.24887761, 0.24887761)
 texture = ExtResource("7_ivkd0")
 
-[node name="Tree4" type="Sprite2D" parent="."]
+[node name="Tree4" type="Sprite2D" parent="Decorations"]
 position = Vector2(1783, 1196.0001)
 scale = Vector2(0.24887761, 0.24887761)
 texture = ExtResource("7_ivkd0")
 
-[node name="Tree5" type="Sprite2D" parent="."]
+[node name="Tree5" type="Sprite2D" parent="Decorations"]
 position = Vector2(1420, 217.00012)
 scale = Vector2(0.24887761, 0.24887761)
 texture = ExtResource("7_ivkd0")
 
-[node name="Tree6" type="Sprite2D" parent="."]
+[node name="Tree6" type="Sprite2D" parent="Decorations"]
 position = Vector2(1355, 1544.0001)
 scale = Vector2(0.24887761, 0.24887761)
 texture = ExtResource("7_ivkd0")
 
-[node name="Tree7" type="Sprite2D" parent="."]
+[node name="Tree7" type="Sprite2D" parent="Decorations"]
 position = Vector2(51, 1424)
 scale = Vector2(0.24887761, 0.24887761)
 texture = ExtResource("7_ivkd0")
 
-[node name="Bush" type="Sprite2D" parent="."]
+[node name="Bush" type="Sprite2D" parent="Decorations"]
 position = Vector2(637.00006, 294.00024)
 scale = Vector2(0.35200003, 0.352)
 texture = ExtResource("8_gqryv")
 
-[node name="Bush2" type="Sprite2D" parent="."]
+[node name="Bush2" type="Sprite2D" parent="Decorations"]
 position = Vector2(507.0001, 1290.0001)
 scale = Vector2(0.35200003, 0.352)
 texture = ExtResource("8_gqryv")
 
-[node name="Bush3" type="Sprite2D" parent="."]
+[node name="Bush3" type="Sprite2D" parent="Decorations"]
 position = Vector2(1936, 1308.0001)
 scale = Vector2(0.35200003, 0.352)
 texture = ExtResource("8_gqryv")
 
-[node name="Bush4" type="Sprite2D" parent="."]
+[node name="Bush4" type="Sprite2D" parent="Decorations"]
 position = Vector2(59, 1105.0001)
 rotation = 1.5707964
 scale = Vector2(0.35200003, 0.352)
 texture = ExtResource("8_gqryv")
 
+[node name="Letter_C" type="Area2D" parent="."]
+position = Vector2(855, 703)
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Letter_C"]
+texture = ExtResource("10_chx1n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_C"]
+scale = Vector2(20.04, 20.04)
+shape = SubResource("CircleShape2D_sp7xj")
+
+[node name="Letter_O" type="Area2D" parent="."]
+position = Vector2(260, 1566)
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Letter_O"]
+texture = ExtResource("11_oei0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_O"]
+position = Vector2(13.333333, -66.666664)
+scale = Vector2(20.04, 20.04)
+shape = SubResource("CircleShape2D_sp7xj")
+
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
+[connection signal="body_entered" from="Letter_C" to="." method="_on_letter_c_body_entered"]
+[connection signal="body_entered" from="Letter_O" to="." method="_on_letter_o_body_entered"]
