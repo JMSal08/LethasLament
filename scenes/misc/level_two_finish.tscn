@@ -1,0 +1,170 @@
+[gd_scene load_steps=11 format=3 uid="uid://cgjr6mpdvfbks"]
+
+[ext_resource type="Script" uid="uid://d3d03i83wowl6" path="res://scripts/levels/level_two/level_two_finish.gd" id="1_ndq4u"]
+[ext_resource type="Texture2D" uid="uid://bbm13eqscmiex" path="res://assets/levels/level_two/images/bg/level2bg.png" id="1_q57fn"]
+[ext_resource type="Texture2D" uid="uid://b2cyi1r5hbmmb" path="res://assets/misc/tree.png" id="2_ndq4u"]
+[ext_resource type="Texture2D" uid="uid://d1liulwxkddc8" path="res://assets/misc/bush.png" id="3_3h8dk"]
+[ext_resource type="PackedScene" uid="uid://dd16j3wotjuev" path="res://scenes/misc/slot.tscn" id="3_q57fn"]
+[ext_resource type="Texture2D" uid="uid://d27p1lwllw2u5" path="res://assets/letters/O.png" id="5_0ya6m"]
+[ext_resource type="Texture2D" uid="uid://d0spsrcqloris" path="res://assets/letters/C.png" id="6_0ya6m"]
+[ext_resource type="Texture2D" uid="uid://blgsyj48ruit3" path="res://assets/levels/level_one/images/Cat_lvl1.png" id="7_tp17s"]
+[ext_resource type="FontFile" uid="uid://celc3h3f87gce" path="res://fonts/Super Joyful.ttf" id="8_4kaq3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tp17s"]
+texture = ExtResource("1_q57fn")
+
+[node name="LevelTwoFinish" type="Node2D"]
+script = ExtResource("1_ndq4u")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 2360.0
+offset_bottom = 1640.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tp17s")
+
+[node name="Decorations" type="CanvasGroup" parent="."]
+
+[node name="Tree" type="Sprite2D" parent="Decorations"]
+position = Vector2(339, 1230)
+scale = Vector2(0.24887761, 0.24887761)
+texture = ExtResource("2_ndq4u")
+
+[node name="Tree2" type="Sprite2D" parent="Decorations"]
+position = Vector2(2289, 824)
+scale = Vector2(0.24887761, 0.24887761)
+texture = ExtResource("2_ndq4u")
+
+[node name="Tree3" type="Sprite2D" parent="Decorations"]
+position = Vector2(160.00003, 355.00012)
+scale = Vector2(0.24887761, 0.24887761)
+texture = ExtResource("2_ndq4u")
+
+[node name="Tree4" type="Sprite2D" parent="Decorations"]
+position = Vector2(1783, 1196.0001)
+scale = Vector2(0.24887761, 0.24887761)
+texture = ExtResource("2_ndq4u")
+
+[node name="Tree5" type="Sprite2D" parent="Decorations"]
+position = Vector2(1420, 217.00012)
+scale = Vector2(0.24887761, 0.24887761)
+texture = ExtResource("2_ndq4u")
+
+[node name="Tree6" type="Sprite2D" parent="Decorations"]
+position = Vector2(1355, 1544.0001)
+scale = Vector2(0.24887761, 0.24887761)
+texture = ExtResource("2_ndq4u")
+
+[node name="Tree7" type="Sprite2D" parent="Decorations"]
+position = Vector2(51, 1424)
+scale = Vector2(0.24887761, 0.24887761)
+texture = ExtResource("2_ndq4u")
+
+[node name="Bush" type="Sprite2D" parent="Decorations"]
+position = Vector2(637.00006, 294.00024)
+scale = Vector2(0.35200003, 0.352)
+texture = ExtResource("3_3h8dk")
+
+[node name="Bush2" type="Sprite2D" parent="Decorations"]
+position = Vector2(507.0001, 1290.0001)
+scale = Vector2(0.35200003, 0.352)
+texture = ExtResource("3_3h8dk")
+
+[node name="Bush3" type="Sprite2D" parent="Decorations"]
+position = Vector2(1936, 1308.0001)
+scale = Vector2(0.35200003, 0.352)
+texture = ExtResource("3_3h8dk")
+
+[node name="Bush4" type="Sprite2D" parent="Decorations"]
+position = Vector2(59, 1105.0001)
+rotation = 1.5707964
+scale = Vector2(0.35200003, 0.352)
+texture = ExtResource("3_3h8dk")
+
+[node name="Letter_O" parent="." instance=ExtResource("3_q57fn")]
+offset_left = 1700.0
+offset_top = 65.0
+offset_right = 1800.0
+offset_bottom = 165.0
+scale = Vector2(3, 3)
+texture = ExtResource("5_0ya6m")
+
+[node name="Letter_R" parent="." instance=ExtResource("3_q57fn")]
+offset_left = 1700.0
+offset_top = 465.0
+offset_right = 1800.0
+offset_bottom = 565.0
+scale = Vector2(3, 3)
+texture = ExtResource("5_0ya6m")
+
+[node name="Letter_C" parent="." instance=ExtResource("3_q57fn")]
+offset_left = 1700.0
+offset_top = 865.0
+offset_right = 1800.0
+offset_bottom = 965.0
+scale = Vector2(3, 3)
+texture = ExtResource("6_0ya6m")
+
+[node name="SlotOne" parent="." instance=ExtResource("3_q57fn")]
+offset_left = 65.0
+offset_top = 1100.0
+offset_right = 165.0
+offset_bottom = 1200.0
+scale = Vector2(3, 3)
+
+[node name="SlotTwo" parent="." instance=ExtResource("3_q57fn")]
+offset_left = 465.0
+offset_top = 1100.0
+offset_right = 565.0
+offset_bottom = 1200.0
+scale = Vector2(3, 3)
+
+[node name="SlotThree" parent="." instance=ExtResource("3_q57fn")]
+offset_left = 865.0
+offset_top = 1100.0
+offset_right = 965.0
+offset_bottom = 1200.0
+scale = Vector2(3, 3)
+
+[node name="SlotFour" parent="." instance=ExtResource("3_q57fn")]
+offset_left = 1265.0
+offset_top = 1100.0
+offset_right = 1365.0
+offset_bottom = 1200.0
+scale = Vector2(3, 3)
+
+[node name="Picture" type="TextureRect" parent="."]
+offset_left = 329.99997
+offset_top = 227.99998
+offset_right = 5258.0
+offset_bottom = 3492.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_tp17s")
+
+[node name="AnswerButton" type="Button" parent="."]
+offset_left = 1110.0
+offset_top = 1504.0
+offset_right = 1334.0
+offset_bottom = 1599.0
+theme_override_fonts/font = ExtResource("8_4kaq3")
+theme_override_font_sizes/font_size = 72
+text = "Answer"
+
+[node name="ResetButton" type="Button" parent="."]
+offset_left = 340.0
+offset_top = 1506.0
+offset_right = 505.0
+offset_bottom = 1601.0
+theme_override_fonts/font = ExtResource("8_4kaq3")
+theme_override_font_sizes/font_size = 72
+text = "Reset"
+
+[node name="Letter_W" parent="." instance=ExtResource("3_q57fn")]
+offset_left = 1700.0
+offset_top = 1265.0
+offset_right = 1800.0
+offset_bottom = 1365.0
+scale = Vector2(3, 3)
+texture = ExtResource("6_0ya6m")
+
+[connection signal="pressed" from="AnswerButton" to="." method="_on_answer_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
