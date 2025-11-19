@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://dpmr1l5ci1ftq"]
+[gd_scene load_steps=27 format=3 uid="uid://dpmr1l5ci1ftq"]
 
+[ext_resource type="Script" uid="uid://byulqhhii7b77" path="res://scripts/levels/level_three/level_three.gd" id="1_jbu4w"]
 [ext_resource type="Texture2D" uid="uid://cr1t447xq4oqa" path="res://assets/levels/level_three/images/bg/level3bg.png" id="1_y0l6c"]
 [ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/misc/letha.gd" id="2_4umhc"]
 [ext_resource type="Texture2D" uid="uid://cc3gt31qpqnto" path="res://assets/sprites/idle_spritesheet.png" id="3_7ry6i"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://d27p1lwllw2u5" path="res://assets/letters/O.png" id="7_7ry6i"]
 [ext_resource type="Texture2D" uid="uid://biljtxddthxsx" path="res://assets/letters/V.png" id="8_vmov0"]
 [ext_resource type="Texture2D" uid="uid://b611lxeo3pktf" path="res://assets/letters/E.png" id="9_7s1bx"]
+[ext_resource type="FontFile" uid="uid://dxk76a2ryw1iv" path="res://fonts/Bigbesty.otf" id="11_s458d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
 atlas = ExtResource("3_7ry6i")
@@ -107,6 +109,7 @@ radius = 12.143503
 [sub_resource type="CircleShape2D" id="CircleShape2D_vmov0"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_jbu4w")
 
 [node name="MapTexture" type="TextureRect" parent="."]
 offset_right = 2360.0
@@ -265,4 +268,25 @@ texture = ExtResource("9_7s1bx")
 scale = Vector2(20.04, 20.04)
 shape = SubResource("CircleShape2D_vmov0")
 
+[node name="FinishPoint" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FinishPoint"]
+polygon = PackedVector2Array(1702, 407, 1425, 407, 1426, 554, 1697, 552)
+
+[node name="FinishPointMarker" type="Label" parent="."]
+visible = false
+offset_left = 1447.0
+offset_top = 448.0
+offset_right = 1689.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0.6509804, 0.24705882, 0.21176471, 1)
+theme_override_fonts/font = ExtResource("11_s458d")
+theme_override_font_sizes/font_size = 60
+text = "Go Here"
+
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
+[connection signal="body_entered" from="Letter_L" to="." method="_on_letter_l_body_entered"]
+[connection signal="body_entered" from="Letter_O" to="." method="_on_letter_o_body_entered"]
+[connection signal="body_entered" from="Letter_V" to="." method="_on_letter_v_body_entered"]
+[connection signal="body_entered" from="Letter_E" to="." method="_on_letter_e_body_entered"]
+[connection signal="body_entered" from="FinishPoint" to="." method="_on_finish_point_body_entered"]
