@@ -106,23 +106,23 @@ scale = Vector2(3, 3)
 texture = ExtResource("8_ndq4u")
 
 [node name="SlotOne" parent="." instance=ExtResource("3_q57fn")]
-offset_left = 65.0
+offset_left = 265.0
 offset_top = 1100.0
-offset_right = 165.0
+offset_right = 365.0
 offset_bottom = 1200.0
 scale = Vector2(3, 3)
 
 [node name="SlotTwo" parent="." instance=ExtResource("3_q57fn")]
-offset_left = 465.0
+offset_left = 665.0
 offset_top = 1100.0
-offset_right = 565.0
+offset_right = 765.0
 offset_bottom = 1200.0
 scale = Vector2(3, 3)
 
 [node name="SlotThree" parent="." instance=ExtResource("3_q57fn")]
-offset_left = 865.0
+offset_left = 1065.0
 offset_top = 1100.0
-offset_right = 965.0
+offset_right = 1165.0
 offset_bottom = 1200.0
 scale = Vector2(3, 3)
 
