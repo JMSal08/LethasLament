@@ -3,6 +3,7 @@ extends Node2D
 @onready var Letha = $Letha
 @onready var SpeechBox = $SpeechBox
 @onready var Warning = $SpeechBox/Warning
+@onready var FinishPointMarker = $FinishPointMarker
 
 @onready var LevelTwoFinish = $LevelTwoFinish
 
@@ -15,6 +16,10 @@ var wall_touches = 0
 var has_D = false
 var has_O = false
 var has_G = false
+
+func _process(_delta: float) -> void:
+	if has_D && has_O && has_G:
+		FinishPointMarker.visible = true
 
 func _on_wall_hitboxes_body_entered(_body: Node2D) -> void:
 	wall_touches += 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cys4gmwgyiau"]
+[gd_scene load_steps=38 format=3 uid="uid://cys4gmwgyiau"]
 
 [ext_resource type="Script" uid="uid://b8k8fl2kcvis8" path="res://scripts/levels/level_two/level_two.gd" id="1_gqryv"]
 [ext_resource type="Texture2D" uid="uid://bbm13eqscmiex" path="res://assets/levels/level_two/images/bg/level2bg.png" id="1_nei2a"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bmal2u03gvj8i" path="res://assets/letters/G.png" id="12_iuav1"]
 [ext_resource type="PackedScene" uid="uid://cgjr6mpdvfbks" path="res://scenes/misc/level_two_finish.tscn" id="12_oei0b"]
 [ext_resource type="FontFile" uid="uid://cbx067530bvx2" path="res://fonts/Spicy Sale.otf" id="14_iuav1"]
+[ext_resource type="FontFile" uid="uid://dxk76a2ryw1iv" path="res://fonts/Bigbesty.otf" id="15_yr121"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
 atlas = ExtResource("3_ivcj6")
@@ -351,7 +352,7 @@ position = Vector2(196, 241)
 scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_ypgp8")
 autoplay = "default"
-frame_progress = 0.79211706
+frame_progress = 0.21971339
 
 [node name="Warning" type="Label" parent="SpeechBox"]
 layout_mode = 0
@@ -362,6 +363,17 @@ offset_bottom = 171.0
 theme_override_fonts/font = ExtResource("14_iuav1")
 theme_override_font_sizes/font_size = 72
 horizontal_alignment = 1
+
+[node name="FinishPointMarker" type="Label" parent="."]
+visible = false
+offset_left = 1082.0
+offset_top = 792.0
+offset_right = 1324.0
+offset_bottom = 854.0
+theme_override_colors/font_color = Color(0.6509804, 0.24705882, 0.21176471, 1)
+theme_override_fonts/font = ExtResource("15_yr121")
+theme_override_font_sizes/font_size = 60
+text = "Go Here"
 
 [connection signal="body_entered" from="WallHitboxes" to="." method="_on_wall_hitboxes_body_entered"]
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]

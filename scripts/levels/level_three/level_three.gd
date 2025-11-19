@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var LevelThreeFinish = $LevelThreeFinish
+
 @onready var Letter_L = $Letter_L
 @onready var Letter_O = $Letter_O
 @onready var Letter_V = $Letter_V
@@ -15,7 +17,7 @@ var has_E = false
 
 func _process(_delta: float) -> void:
 	if has_L && has_O && has_V && has_E:
-		FinishPointMarker.visible = true	
+		FinishPointMarker.visible = true
 
 func _on_letter_l_body_entered(_body: Node2D) -> void:
 	has_L = true
@@ -39,4 +41,4 @@ func _on_letter_e_body_entered(_body: Node2D) -> void:
 
 func _on_finish_point_body_entered(_body: Node2D) -> void:
 	if has_L && has_O && has_V && has_E:
-		pass
+		LevelThreeFinish.visible = true
