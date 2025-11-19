@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dpmr1l5ci1ftq"]
+[gd_scene load_steps=25 format=3 uid="uid://dpmr1l5ci1ftq"]
 
 [ext_resource type="Texture2D" uid="uid://cr1t447xq4oqa" path="res://assets/levels/level_three/images/bg/level3bg.png" id="1_y0l6c"]
 [ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/misc/letha.gd" id="2_4umhc"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://b5d8dd44caygq" path="res://assets/sprites/down_spritesheet.png" id="4_vmov0"]
 [ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/misc/wall_hitboxes.gd" id="5_7s1bx"]
 [ext_resource type="Texture2D" uid="uid://bgbb6j38atbcw" path="res://assets/letters/L.png" id="6_4umhc"]
+[ext_resource type="Texture2D" uid="uid://d27p1lwllw2u5" path="res://assets/letters/O.png" id="7_7ry6i"]
+[ext_resource type="Texture2D" uid="uid://biljtxddthxsx" path="res://assets/letters/V.png" id="8_vmov0"]
+[ext_resource type="Texture2D" uid="uid://b611lxeo3pktf" path="res://assets/letters/E.png" id="9_7s1bx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
 atlas = ExtResource("3_7ry6i")
@@ -101,6 +104,8 @@ height = 97.5
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ry6i"]
 radius = 12.143503
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vmov0"]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="MapTexture" type="TextureRect" parent="."]
@@ -159,16 +164,105 @@ polygon = PackedVector2Array(258, 866, 553, 866, 553, 684, 590, 684, 590, 911, 4
 [node name="WallGroupNine" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(258, 1048, 295, 1048, 295, 1185, 553, 1185, 553, 1047, 590, 1047, 590, 1230, 295, 1230, 295, 1321, 258, 1321)
 
-[node name="Letter" type="Area2D" parent="."]
+[node name="WallGroupTen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(700, 137, 848, 137, 848, 546, 701, 546)
+
+[node name="WallGroupEleven" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(959, -5, 959, 182, 995, 182, 995, -4)
+
+[node name="WallGroupTwelve" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(959, 319, 959, 684, 849, 684, 849, 728, 1438, 728, 1438, 592, 1733, 592, 1733, 137, 1697, 137, 1697, 365, 1549, 365, 1549, 410, 1696, 410, 1696, 547, 1439, 547, 1438, 137, 1402, 137, 1401, 684, 1290, 684, 1290, 500, 1254, 500, 1254, 684, 996, 683, 995, 319)
+
+[node name="WallGroupThirteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1107, 137, 1290, 137, 1290, 182, 1143, 182, 1143, 319, 1290, 319, 1290, 365, 1143, 364, 1143, 547, 1106, 547)
+
+[node name="WallGroupFourteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(553, 1367, 737, 1367, 737, 1655, 554, 1655)
+
+[node name="WallGroupFifteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(701, 683, 737, 683, 737, 866, 958, 866, 958, 911, 738, 911, 737, 1230, 701, 1230)
+
+[node name="WallGroupSixteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1549, 227, 1585, 227, 1585, -11, 1548, -11)
+
+[node name="WallGroupSeventeen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(849, 1229, 884, 1229, 884, 1093, 1106, 1093, 1106, 866, 1070, 866, 1070, 1048, 848, 1048)
+
+[node name="WallGroupEighteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(848, 1367, 996, 1367, 996, 1230, 1106, 1230, 1106, 1503, 848, 1503)
+
+[node name="WallGroupNineteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1843, -12, 1844, 273, 1880, 273, 1880, -13)
+
+[node name="WallGroupTwenty" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1217, 1229, 1217, 865, 1438, 865, 1438, 1276, 1696, 1276, 1696, 956, 1585, 956, 1585, 1139, 1549, 1139, 1549, 729, 1585, 729, 1585, 912, 1696, 912, 1697, 728, 1880, 729, 1880, 774, 1733, 774, 1733, 1094, 1880, 1094, 1880, 1138, 1732, 1138, 1732, 1321, 1438, 1321, 1438, 1643, 1365, 1643, 1365, 1503, 1218, 1503, 1218, 1367, 1253, 1367, 1253, 1459, 1365, 1459, 1365, 1047, 1253, 1047, 1253, 1229)
+
+[node name="WallGroupTwentyOne" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1844, 410, 1991, 410, 1991, 592, 1844, 592)
+
+[node name="WallGroupTwentyTwo" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1991, 182, 1991, 136, 2249, 136, 2249, 182, 2138, 182, 2138, 592, 2102, 592, 2102, 182)
+
+[node name="WallGroupTwentyThree" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(2250, 319, 2362, 319, 2362, 592, 2249, 592)
+
+[node name="WallGroupTwentyFour" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1549, 1458, 1733, 1458, 1733, 1503, 1585, 1503, 1585, 1641, 1549, 1641)
+
+[node name="WallGroupTwentyFive" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1844, 956, 1844, 911, 2102, 911, 2102, 957, 2028, 957, 2028, 1276, 2102, 1276, 2102, 1321, 2028, 1321, 2028, 1503, 1954, 1503, 1954, 1642, 1918, 1642, 1918, 1503, 1844, 1503, 1844, 1275, 1881, 1275, 1881, 1458, 1991, 1458, 1991, 956)
+
+[node name="WallGroupTwentySix" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1991, 774, 1991, 729, 2249, 729, 2249, 1643, 2213, 1643, 2213, 1503, 2139, 1503, 2139, 1458, 2212, 1458, 2212, 1138, 2139, 1138, 2139, 1093, 2213, 1093, 2213, 774)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(0, 1640, 2360, 1640, 2360, 0, 0, 0, 0, 1639, -7, 1639, -11, -30, 2397, -21, 2368, 1646, 0, 1647, -7, 1647, -7, 1639, 0, 1639)
+
+[node name="Letter_L" type="Area2D" parent="."]
 position = Vector2(1663, 1059)
 scale = Vector2(0.3, 0.3)
 
-[node name="Sprite2D" type="Sprite2D" parent="Letter"]
+[node name="Sprite2D" type="Sprite2D" parent="Letter_L"]
 texture = ExtResource("6_4umhc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_L"]
 position = Vector2(-90, -80)
 scale = Vector2(20.04, 20.04)
 shape = SubResource("CircleShape2D_7ry6i")
+
+[node name="Letter_O" type="Area2D" parent="."]
+position = Vector2(1315, 1116)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Letter_O"]
+position = Vector2(-17.499998, 27.499998)
+texture = ExtResource("7_7ry6i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_O"]
+scale = Vector2(20.04, 20.04)
+shape = SubResource("CircleShape2D_vmov0")
+
+[node name="Letter_V" type="Area2D" parent="."]
+position = Vector2(1216, 268)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Letter_V"]
+texture = ExtResource("8_vmov0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_V"]
+scale = Vector2(20.04, 20.04)
+shape = SubResource("CircleShape2D_vmov0")
+
+[node name="Letter_E" type="Area2D" parent="."]
+position = Vector2(2030, 1571)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Letter_E"]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_7s1bx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_E"]
+scale = Vector2(20.04, 20.04)
+shape = SubResource("CircleShape2D_vmov0")
 
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
