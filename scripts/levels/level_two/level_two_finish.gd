@@ -16,9 +16,9 @@ var G_Texture: Texture2D = preload("res://assets/letters/G.png")
 
 func _on_answer_button_pressed() -> void:
 	print("pressed answer")
-	if SlotOne.texture == Letter_D.texture:
-		if SlotTwo.texture == Letter_O.texture:
-			if SlotThree.texture == Letter_G.texture:
+	if SlotOne.texture == D_Texture:
+		if SlotTwo.texture == O_Texture:
+			if SlotThree.texture == G_Texture:
 				print("pass")
 				AudioPlayer.playLevelThree()
 				TransitionScene.change_scene_to_file("res://scenes/levels/level_three.tscn")
