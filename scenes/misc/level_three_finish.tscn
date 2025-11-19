@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://clmxnnr7kp8gy"]
 
-[ext_resource type="Script" uid="uid://d3d03i83wowl6" path="res://scripts/levels/level_two/level_two_finish.gd" id="1_4ccmg"]
+[ext_resource type="Script" uid="uid://dunl77womspy6" path="res://scripts/levels/level_three/level_three_finish.gd" id="1_fbgty"]
 [ext_resource type="Texture2D" uid="uid://cr1t447xq4oqa" path="res://assets/levels/level_three/images/bg/level3bg.png" id="2_fbgty"]
 [ext_resource type="Texture2D" uid="uid://b611lxeo3pktf" path="res://assets/letters/E.png" id="4_4ccmg"]
 [ext_resource type="PackedScene" uid="uid://dd16j3wotjuev" path="res://scenes/misc/slot.tscn" id="5_faukb"]
@@ -13,8 +13,8 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbowp"]
 texture = ExtResource("2_fbgty")
 
-[node name="LevelTwoFinish" type="Node2D"]
-script = ExtResource("1_4ccmg")
+[node name="LevelThreeFinish" type="Node2D"]
+script = ExtResource("1_fbgty")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 2360.0
