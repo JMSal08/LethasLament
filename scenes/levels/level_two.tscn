@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cys4gmwgyiau"]
+[gd_scene load_steps=29 format=3 uid="uid://cys4gmwgyiau"]
 
 [ext_resource type="Script" uid="uid://b8k8fl2kcvis8" path="res://scripts/levels/level_two/level_two.gd" id="1_gqryv"]
 [ext_resource type="Texture2D" uid="uid://bbm13eqscmiex" path="res://assets/levels/level_two/images/bg/level2bg.png" id="1_nei2a"]
@@ -9,8 +9,9 @@
 [ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/misc/wall_hitboxes.gd" id="6_ivcj6"]
 [ext_resource type="Texture2D" uid="uid://b2cyi1r5hbmmb" path="res://assets/misc/tree.png" id="7_ivkd0"]
 [ext_resource type="Texture2D" uid="uid://d1liulwxkddc8" path="res://assets/misc/bush.png" id="8_gqryv"]
-[ext_resource type="Texture2D" uid="uid://d0spsrcqloris" path="res://assets/letters/C.png" id="10_chx1n"]
+[ext_resource type="Texture2D" uid="uid://oe72qv4tbt7d" path="res://assets/letters/D.png" id="10_fo2p1"]
 [ext_resource type="Texture2D" uid="uid://d27p1lwllw2u5" path="res://assets/letters/O.png" id="11_oei0b"]
+[ext_resource type="Texture2D" uid="uid://bmal2u03gvj8i" path="res://assets/letters/G.png" id="12_iuav1"]
 [ext_resource type="PackedScene" uid="uid://cgjr6mpdvfbks" path="res://scenes/misc/level_two_finish.tscn" id="12_oei0b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
@@ -104,6 +105,8 @@ radius = 25.454544
 height = 97.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sp7xj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yr121"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_gqryv")
@@ -231,14 +234,14 @@ rotation = 1.5707964
 scale = Vector2(0.35200003, 0.352)
 texture = ExtResource("8_gqryv")
 
-[node name="Letter_C" type="Area2D" parent="."]
-position = Vector2(855, 703)
+[node name="Letter_D" type="Area2D" parent="."]
+position = Vector2(840, 686)
 scale = Vector2(0.3, 0.3)
 
-[node name="Sprite2D" type="Sprite2D" parent="Letter_C"]
-texture = ExtResource("10_chx1n")
+[node name="Sprite2D" type="Sprite2D" parent="Letter_D"]
+texture = ExtResource("10_fo2p1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_C"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_D"]
 scale = Vector2(20.04, 20.04)
 shape = SubResource("CircleShape2D_sp7xj")
 
@@ -254,16 +257,41 @@ position = Vector2(13.333333, -66.666664)
 scale = Vector2(20.04, 20.04)
 shape = SubResource("CircleShape2D_sp7xj")
 
+[node name="Letter_G" type="Area2D" parent="."]
+position = Vector2(1885, 1428)
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Letter_G"]
+texture = ExtResource("12_iuav1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_G"]
+position = Vector2(-10.000406, -50)
+scale = Vector2(20.04, 20.04)
+shape = SubResource("CircleShape2D_yr121")
+
 [node name="LevelTwoFinish" parent="." instance=ExtResource("12_oei0b")]
 visible = false
 
 [node name="FinishPoint" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FinishPoint"]
 polygon = PackedVector2Array(1069, 729, 1327, 729, 1327, 911, 1069, 910)
 
+[node name="TPAreaOne" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TPAreaOne"]
+polygon = PackedVector2Array(4, 669, 4, 971, -34, 970, -25, 670)
+
+[node name="TPAreaTwo" type="Area2D" parent="."]
+position = Vector2(2375, 26)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TPAreaTwo"]
+polygon = PackedVector2Array(4, 669, 4, 971, -34, 970, -25, 670)
+
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
-[connection signal="body_entered" from="Letter_C" to="." method="_on_letter_c_body_entered"]
+[connection signal="body_entered" from="Letter_D" to="." method="_on_letter_d_body_entered"]
 [connection signal="body_entered" from="Letter_O" to="." method="_on_letter_o_body_entered"]
+[connection signal="body_entered" from="Letter_G" to="." method="_on_letter_g_body_entered"]
 [connection signal="body_entered" from="FinishPoint" to="." method="_on_finish_point_body_entered"]
+[connection signal="body_entered" from="TPAreaOne" to="." method="_on_tp_area_one_body_entered"]
+[connection signal="body_entered" from="TPAreaTwo" to="." method="_on_tp_area_two_body_entered"]

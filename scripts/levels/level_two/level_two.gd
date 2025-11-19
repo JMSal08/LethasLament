@@ -1,30 +1,43 @@
 extends Node2D
 
+@onready var Letha = $Letha
+
 @onready var LevelTwoFinish = $LevelTwoFinish
 
-@onready var Letter_C = $Letter_C
-@onready var Letter_R
+@onready var Letter_D = $Letter_D
 @onready var Letter_O = $Letter_O
-@onready var Letter_W
+@onready var Letter_G = $Letter_G
 
-var has_C = false
-var has_R = false
+var has_D = false
 var has_O = false
-var has_W = false
+var has_G = false
 
-func _on_letter_c_body_entered(_body: Node2D) -> void:
-	has_C = true
-	Letter_C.visible = false
-	print("Got C")
-
+func _on_letter_d_body_entered(_body: Node2D) -> void:
+	has_D = true
+	Letter_D.visible = false
+	print("Got D")
 
 func _on_letter_o_body_entered(_body: Node2D) -> void:
-	has_O = false
+	has_O = true
 	Letter_O.visible = false
 	print("Got O")
 
 
+func _on_letter_g_body_entered(_body: Node2D) -> void:
+	has_G = true
+	Letter_G.visible = false
+	print("Got G")
+
+
 func _on_finish_point_body_entered(_body: Node2D) -> void:
-	if has_C && has_R && has_O && has_W:
+	if has_D && has_O && has_G:
 		print("Got em all")
 		LevelTwoFinish.show()
+
+
+func _on_tp_area_one_body_entered(_body: Node2D) -> void:
+	Letha.global_position = Vector2(2329, 852)
+
+
+func _on_tp_area_two_body_entered(_body: Node2D) -> void:
+	Letha.global_position = Vector2(29, 829)
