@@ -13,7 +13,6 @@ var G_Texture: Texture2D = preload("res://assets/letters/G.png")
 @onready var SlotOne = $SlotOne
 @onready var SlotTwo = $SlotTwo
 @onready var SlotThree = $SlotThree
-@onready var SlotFour = $SlotFour
 
 func _on_answer_button_pressed() -> void:
 	print("pressed answer")
@@ -21,6 +20,7 @@ func _on_answer_button_pressed() -> void:
 		if SlotTwo.texture == Letter_O.texture:
 			if SlotThree.texture == Letter_G.texture:
 				print("pass")
+				AudioPlayer.playLevelThree()
 				TransitionScene.change_scene_to_file("res://scenes/levels/level_three.tscn")
 
 

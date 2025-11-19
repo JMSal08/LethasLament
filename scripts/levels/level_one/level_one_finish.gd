@@ -18,6 +18,7 @@ func _on_answer_button_pressed() -> void:
 		if SlotTwo.texture == Letter_A.texture:
 			if SlotThree.texture == Letter_T.texture:
 				print("pass")
+				AudioPlayer.playLevelTwo()
 				TransitionScene.change_scene_to_file("res://scenes/levels/level_two.tscn")
 
 
