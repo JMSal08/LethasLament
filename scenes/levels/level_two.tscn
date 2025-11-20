@@ -228,7 +228,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="LevelTwo" type="Node2D"]
 script = ExtResource("1_gqryv")
 
 [node name="MapTexture" type="TextureRect" parent="."]

@@ -12,6 +12,10 @@ func _physics_process(_delta: float) -> void:
 		animated_sprite.play("left")
 	elif  Input.is_action_pressed("down") && Input.is_action_pressed("right"):
 		animated_sprite.play("right")
+	elif Input.is_action_pressed("up") && Input.is_action_pressed("left"):
+		animated_sprite.play("left")
+	elif  Input.is_action_pressed("up") && Input.is_action_pressed("right"):
+		animated_sprite.play("right")
 	elif Input.is_action_pressed("down"):
 		animated_sprite.play("down")
 	elif Input.is_action_pressed("up"):

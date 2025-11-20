@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://carj3mxgjgman"]
+
+[ext_resource type="Texture2D" uid="uid://d2i4difpj63ux" path="res://assets/levels/level_four/images/level4.png" id="1_nqkga"]
+[ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/misc/wall_hitboxes.gd" id="2_asnl3"]
+
+[node name="LevelFour" type="Node2D"]
+
+[node name="MapTexture" type="TextureRect" parent="."]
+offset_right = 2360.0
+offset_bottom = 1640.0
+texture = ExtResource("1_nqkga")
+
+[node name="WallHitboxes" type="Area2D" parent="."]
+script = ExtResource("2_asnl3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(123, 114, 123, 152, -2, 152, -2, 114)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(92, 418, 92, 266, 123, 266, 123, 607, 92, 607, 92, 456, -1, 456, -1, 418)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(123, 873, 215, 873, 215, 569, 246, 569, 246, 873, 360, 873, 360, 909, 246, 909, 246, 1329, 492, 1329, 492, 1367, 215, 1367, 215, 911, 123, 911, 123, 1063, -1, 1063, -1, 1025, 92, 1025, 92, 911, -1, 911, -1, 873, 92, 873, 92, 722, 123, 722)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(93, 1366, 122, 1366, 122, 1177, -1, 1177, -1, 1215, 93, 1215)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(93, 1481, 245, 1481, 245, 1518, 122, 1518, 122, 1632, 93, 1632)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(339, 1518, 339, 1481, 491, 1481, 491, 1632, 462, 1632, 462, 1518)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(368, 114, 368, 151, 245, 151, 245, 267, 368, 267, 368, 455, 216, 455, 216, 418, 339, 418, 339, 303, 216, 302, 216, -2, 245, -2, 245, 114)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(461, 75, 491, 75, 491, -2, 461, -2)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(491, 191, 491, 419, 614, 419, 614, 455, 491, 455, 491, 607, 368, 607, 368, 723, 614, 723, 614, 758, 339, 758, 339, 571, 462, 571, 462, 191)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(368, 1025, 368, 1178, 462, 1178, 462, 874, 736, 874, 736, 910, 491, 910, 491, 1178, 736, 1178, 737, 1481, 860, 1481, 860, 1517, 585, 1517, 585, 1329, 614, 1329, 614, 1481, 707, 1481, 707, 1214, 339, 1214, 339, 1025)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(584, 151, 983, 151, 983, -3, 953, -3, 953, 115, 584, 115)
+
+[connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]

@@ -6,4 +6,3 @@ extends Area2D
 func _on_body_entered(_body: Node2D) -> void:
 	letha.global_position = target_loc
 	pass
-	

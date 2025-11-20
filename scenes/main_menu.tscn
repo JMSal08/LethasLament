@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://klal2iypyvkl"]
+[gd_scene load_steps=37 format=3 uid="uid://klal2iypyvkl"]
 
 [ext_resource type="Script" uid="uid://bi5fw3nwdkiiq" path="res://scripts/main_menu.gd" id="1_7b55j"]
 [ext_resource type="FontFile" uid="uid://p8xw6f8ocjgt" path="res://fonts/Milkyway DEMO.ttf" id="1_l6cm7"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://hpspr31800ij" path="res://assets/main_menu/images/bg/frame2.png" id="14_a8gd2"]
 [ext_resource type="Texture2D" uid="uid://b4o7tx0r170kh" path="res://assets/main_menu/images/bg/frame3.png" id="15_hstxw"]
 [ext_resource type="FontFile" uid="uid://celc3h3f87gce" path="res://fonts/Super Joyful.ttf" id="16_5pajh"]
+[ext_resource type="Texture2D" uid="uid://xrfala0brmp4" path="res://assets/main_menu/images/design/Decor.png" id="17_j7ex8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7b55j"]
 
@@ -189,10 +190,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1025.0
-offset_top = -757.0
-offset_right = 579.0
-offset_bottom = -510.0
+offset_left = -1009.0
+offset_top = 638.0
+offset_right = 595.0
+offset_bottom = 885.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_l6cm7")
@@ -206,10 +207,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -666.0
-offset_top = -748.0
-offset_right = -594.0
-offset_bottom = -482.0
+offset_left = -660.0
+offset_top = 645.0
+offset_right = -588.0
+offset_bottom = 911.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_wu84c")
@@ -261,6 +262,13 @@ libraries = {
 libraries = {
 &"": SubResource("AnimationLibrary_a8gd2")
 }
+
+[node name="Decor" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 2360.0
+offset_bottom = 1640.0
+mouse_filter = 2
+texture = ExtResource("17_j7ex8")
 
 [node name="Instructions" type="Panel" parent="."]
 visible = false
