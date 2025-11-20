@@ -13,37 +13,100 @@ texture = ExtResource("1_nqkga")
 [node name="WallHitboxes" type="Area2D" parent="."]
 script = ExtResource("2_asnl3")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupOne" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(123, 114, 123, 152, -2, 152, -2, 114)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupTwo" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(92, 418, 92, 266, 123, 266, 123, 607, 92, 607, 92, 456, -1, 456, -1, 418)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupThree" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(123, 873, 215, 873, 215, 569, 246, 569, 246, 873, 360, 873, 360, 909, 246, 909, 246, 1329, 492, 1329, 492, 1367, 215, 1367, 215, 911, 123, 911, 123, 1063, -1, 1063, -1, 1025, 92, 1025, 92, 911, -1, 911, -1, 873, 92, 873, 92, 722, 123, 722)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupFour" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(93, 1366, 122, 1366, 122, 1177, -1, 1177, -1, 1215, 93, 1215)
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupFive" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(93, 1481, 245, 1481, 245, 1518, 122, 1518, 122, 1632, 93, 1632)
 
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupSix" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(339, 1518, 339, 1481, 491, 1481, 491, 1632, 462, 1632, 462, 1518)
 
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupSeven" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(368, 114, 368, 151, 245, 151, 245, 267, 368, 267, 368, 455, 216, 455, 216, 418, 339, 418, 339, 303, 216, 302, 216, -2, 245, -2, 245, 114)
 
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupEight" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(461, 75, 491, 75, 491, -2, 461, -2)
 
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupNine" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(491, 191, 491, 419, 614, 419, 614, 455, 491, 455, 491, 607, 368, 607, 368, 723, 614, 723, 614, 758, 339, 758, 339, 571, 462, 571, 462, 191)
 
-[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupTen" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(368, 1025, 368, 1178, 462, 1178, 462, 874, 736, 874, 736, 910, 491, 910, 491, 1178, 736, 1178, 737, 1481, 860, 1481, 860, 1517, 585, 1517, 585, 1329, 614, 1329, 614, 1481, 707, 1481, 707, 1214, 339, 1214, 339, 1025)
 
-[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="WallGroupEleven" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(584, 151, 983, 151, 983, -3, 953, -3, 953, 115, 584, 115)
+
+[node name="WallGroupTwelve" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(584, 303, 584, 266, 737, 266, 737, 759, 708, 759, 708, 606, 584, 606, 584, 570, 707, 570, 707, 303)
+
+[node name="WallGroupThirteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(585, 1026, 830, 1026, 830, 721, 983, 721, 983, 910, 953, 910, 953, 758, 860, 758, 860, 1026, 1384, 1026, 1384, 570, 1413, 570, 1413, 722, 1506, 722, 1506, 570, 1629, 570, 1629, 418, 1782, 418, 1782, 455, 1659, 455, 1659, 570, 1781, 570, 1781, 607, 1536, 607, 1536, 722, 1782, 722, 1782, 910, 1629, 910, 1629, 874, 1752, 874, 1752, 758, 1413, 758, 1412, 1062, 1106, 1062, 1106, 1178, 1290, 1178, 1290, 1214, 1076, 1214, 1076, 1062, 860, 1062, 860, 1178, 983, 1178, 983, 1214, 830, 1214, 830, 1062, 585, 1062)
+
+[node name="WallGroupFourteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(830, 1366, 1076, 1366, 1076, 1442, 1106, 1442, 1106, 1366, 1384, 1366, 1384, 1482, 1199, 1482, 1199, 1517, 1413, 1517, 1413, 1214, 1536, 1214, 1536, 1062, 1659, 1062, 1659, 1025, 1536, 1025, 1536, 874, 1507, 874, 1507, 1178, 1384, 1178, 1384, 1330, 830, 1330)
+
+[node name="WallGroupFifteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(953, 1481, 983, 1481, 983, 1632, 953, 1632)
+
+[node name="WallGroupSixteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1076, 1557, 1106, 1557, 1106, 1632, 1076, 1632)
+
+[node name="WallGroupSeventeen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1290, 114, 1106, 114, 1106, -2, 1076, -2, 1076, 151, 1290, 151)
+
+[node name="WallGroupEighteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1136, 570, 1136, 607, 830, 607, 830, 266, 983, 266, 983, 418, 1076, 418, 1076, 266, 1136, 266, 1136, 303, 1106, 303, 1106, 418, 1137, 418, 1137, 455, 953, 455, 953, 303, 860, 303, 860, 570)
+
+[node name="WallGroupNineteen" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1230, 418, 1413, 418, 1413, 455, 1230, 455)
+
+[node name="WallGroupTwenty" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1413, 266, 1536, 266, 1536, 455, 1506, 455, 1506, 303, 1230, 303, 1230, 266, 1383, 266, 1383, 114, 1506, 114, 1506, -3, 1536, -3, 1536, 151, 1413, 151)
+
+[node name="WallGroupTwentyOne" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1136, 758, 1136, 722, 1076, 722, 1076, 910, 1136, 910, 1136, 874, 1106, 874, 1106, 758)
+
+[node name="WallGroupTwentyTwo" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1230, 570, 1290, 570, 1290, 910, 1230, 910, 1230, 874, 1261, 874, 1261, 758, 1230, 758, 1230, 722, 1261, 722, 1261, 606, 1230, 606)
+
+[node name="WallGroupTwentyThree" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1506, 1329, 1536, 1329, 1536, 1632, 1506, 1632)
+
+[node name="WallGroupTwentyFour" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1629, 1481, 1659, 1481, 1659, 1632, 1629, 1632)
+
+[node name="WallGroupTwentyFive" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1629, 1177, 1659, 1177, 1659, 1366, 1629, 1366)
+
+[node name="WallGroupTwentySix" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1629, 303, 1998, 303, 1998, 455, 2089, 455, 2089, 418, 2027, 418, 2027, 266, 1904, 266, 1903, 115, 1876, 115, 1876, 266, 1659, 266, 1659, -8, 1629, -8)
+
+[node name="WallGroupTwentySeven" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1752, 151, 1782, 151, 1782, -3, 1752, -3)
+
+[node name="WallGroupTwentyEight" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1998, 151, 2121, 151, 2121, 303, 2150, 303, 2150, 151, 2244, 151, 2244, 419, 2183, 419, 2183, 454, 2273, 454, 2272, 115, 2027, 115, 2027, -2, 1998, -2)
+
+[node name="WallGroupTwentyNine" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1904, 419, 1904, 571, 2272, 571, 2272, 606, 1904, 607, 1904, 723, 2027, 723, 2027, 758, 1904, 758, 1904, 1062, 1782, 1062, 1782, 1482, 1904, 1482, 1904, 1518, 1752, 1518, 1753, 1026, 1876, 1026, 1876, 419)
+
+[node name="WallGroupThirty" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(2121, 722, 2363, 722, 2363, 758, 2121, 758)
+
+[node name="WallGroupThirtyOne" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1875, 1329, 2027, 1329, 2027, 1632, 1998, 1632, 1998, 1366, 1875, 1366)
+
+[node name="WallGroupThirtyTwo" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(1998, 874, 2027, 874, 2027, 1026, 2121, 1026, 2121, 874, 2363, 874, 2363, 910, 2150, 910, 2150, 1026, 2273, 1026, 2273, 1366, 2150, 1366, 2150, 1518, 2121, 1518, 2121, 1329, 2244, 1329, 2244, 1062, 2150, 1062, 2150, 1214, 1875, 1213, 1875, 1178, 2122, 1178, 2122, 1061, 1998, 1061)
 
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
