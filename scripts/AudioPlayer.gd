@@ -7,6 +7,7 @@ extends AudioStreamPlayer2D
 @onready var LevelThreeSound = preload("res://scenes/audio/audio_files/levelthree.mp3")
 @onready var LevelFourSound = preload("res://scenes/audio/audio_files/levelfour.mp3")
 @onready var LevelFiveSound = preload("res://scenes/audio/audio_files/levelfive.mp3")
+@onready var CutsceneSound = preload("res://scenes/audio/audio_files/cutscene.mp3")
 
 func _on_ready() -> void:
 	pass
@@ -33,4 +34,8 @@ func playLevelFour() -> void:
 
 func playLevelFive() -> void:
 	AudioPlayer.stream = LevelFiveSound
+	AudioPlayer.play()
+
+func playCutscene() -> void:
+	AudioPlayer.stream = CutsceneSound
 	AudioPlayer.play()

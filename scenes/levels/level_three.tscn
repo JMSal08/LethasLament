@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dpmr1l5ci1ftq"]
+[gd_scene load_steps=43 format=3 uid="uid://dpmr1l5ci1ftq"]
 
 [ext_resource type="Script" uid="uid://byulqhhii7b77" path="res://scripts/levels/level_three/level_three.gd" id="1_jbu4w"]
 [ext_resource type="Texture2D" uid="uid://cr1t447xq4oqa" path="res://assets/levels/level_three/images/bg/level3bg.png" id="1_y0l6c"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cwx4lu8kuvnkv" path="res://assets/sprites/left_spritesheet.png" id="6_6adjy"]
 [ext_resource type="Texture2D" uid="uid://d27p1lwllw2u5" path="res://assets/letters/O.png" id="7_7ry6i"]
 [ext_resource type="Texture2D" uid="uid://bs3nv8ht1a1pp" path="res://assets/sprites/right_spritesheet.png" id="7_h2uyl"]
+[ext_resource type="Texture2D" uid="uid://x78lydx6pbhm" path="res://assets/sprites/up_spritesheet.png" id="8_h2uyl"]
 [ext_resource type="Texture2D" uid="uid://biljtxddthxsx" path="res://assets/letters/V.png" id="8_vmov0"]
 [ext_resource type="Texture2D" uid="uid://cf67d6gir764i" path="res://assets/letters/E.png" id="9_7s1bx"]
 [ext_resource type="FontFile" uid="uid://dxk76a2ryw1iv" path="res://fonts/Bigbesty.otf" id="11_s458d"]
@@ -87,7 +88,23 @@ region = Rect2(2664, 0, 1332, 542)
 atlas = ExtResource("7_h2uyl")
 region = Rect2(3996, 0, 1332, 542)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_6adjy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwqpy"]
+atlas = ExtResource("8_h2uyl")
+region = Rect2(0, 0, 342, 536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7me8y"]
+atlas = ExtResource("8_h2uyl")
+region = Rect2(342, 0, 342, 536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pschm"]
+atlas = ExtResource("8_h2uyl")
+region = Rect2(684, 0, 342, 536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2oc46"]
+atlas = ExtResource("8_h2uyl")
+region = Rect2(1026, 0, 342, 536)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6u02j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -162,6 +179,23 @@ animations = [{
 "loop": true,
 "name": &"right",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwqpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7me8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pschm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2oc46")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s458d"]
@@ -191,10 +225,10 @@ scale = Vector2(0.8, 0.8)
 script = ExtResource("2_4umhc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Letha"]
-position = Vector2(-0.06253052, 0)
-scale = Vector2(0.3499249, 0.335)
-sprite_frames = SubResource("SpriteFrames_6adjy")
-animation = &"down"
+position = Vector2(-0.06250763, 0)
+scale = Vector2(0.3499249, 0.33499998)
+sprite_frames = SubResource("SpriteFrames_6u02j")
+animation = &"up"
 autoplay = "default"
 
 [node name="FeetHitbox" type="CollisionShape2D" parent="Letha"]

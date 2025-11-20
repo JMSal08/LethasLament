@@ -1,0 +1,75 @@
+[gd_scene load_steps=17 format=3 uid="uid://tvc1b83kxeue"]
+
+[ext_resource type="Script" uid="uid://b0jry67mehvcd" path="res://scripts/misc/cutscene.gd" id="1_0ja7w"]
+[ext_resource type="Texture2D" uid="uid://c4okhpv64wudl" path="res://assets/cutscene/1.png" id="1_8q74e"]
+[ext_resource type="Texture2D" uid="uid://dw0qljoppt8a" path="res://assets/cutscene/2.png" id="2_0ja7w"]
+[ext_resource type="Texture2D" uid="uid://ck0sbrtl1mgkh" path="res://assets/cutscene/3.png" id="3_dcrsd"]
+[ext_resource type="Texture2D" uid="uid://phwlrsjbwx5l" path="res://assets/cutscene/4.png" id="4_28fbx"]
+[ext_resource type="Texture2D" uid="uid://cq7vw6wsm8yi1" path="res://assets/cutscene/5.png" id="5_1sb0e"]
+[ext_resource type="Texture2D" uid="uid://c0w2ad5edj5qe" path="res://assets/cutscene/6.png" id="6_ba7j3"]
+[ext_resource type="Texture2D" uid="uid://dsoua3d40kk8y" path="res://assets/cutscene/7.png" id="7_rc8d0"]
+[ext_resource type="Texture2D" uid="uid://bdyofbod2rlrm" path="res://assets/cutscene/8.png" id="8_wdlpo"]
+[ext_resource type="Texture2D" uid="uid://h0vkmbbknsm3" path="res://assets/cutscene/9.png" id="9_q6cnp"]
+[ext_resource type="Texture2D" uid="uid://caaiaaw81rf8v" path="res://assets/cutscene/10.png" id="10_tpfpr"]
+[ext_resource type="Texture2D" uid="uid://ttsthgap2uvk" path="res://assets/cutscene/11.png" id="11_b4xoi"]
+[ext_resource type="Texture2D" uid="uid://c3nqdct02kgur" path="res://assets/cutscene/12.png" id="12_ou2no"]
+
+[sub_resource type="Animation" id="Animation_q3pnn"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_8q74e")]
+}
+
+[sub_resource type="Animation" id="Animation_xnop0"]
+resource_name = "play_cutscene"
+length = 24.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_8q74e"), ExtResource("2_0ja7w"), ExtResource("3_dcrsd"), ExtResource("4_28fbx"), ExtResource("5_1sb0e"), ExtResource("6_ba7j3"), ExtResource("7_rc8d0"), ExtResource("8_wdlpo"), ExtResource("9_q6cnp"), ExtResource("10_tpfpr"), ExtResource("11_b4xoi"), ExtResource("12_ou2no")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_td240"]
+_data = {
+&"RESET": SubResource("Animation_q3pnn"),
+&"play_cutscene": SubResource("Animation_xnop0")
+}
+
+[node name="Cutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ja7w")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 2360.0
+offset_bottom = 1640.0
+texture = ExtResource("1_8q74e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_td240")
+}
+autoplay = "play_cutscene"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
