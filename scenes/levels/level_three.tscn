@@ -288,7 +288,7 @@ polygon = PackedVector2Array(1844, 956, 1844, 911, 2102, 911, 2102, 957, 2028, 9
 [node name="WallGroupTwentySix" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(1991, 774, 1991, 729, 2249, 729, 2249, 1643, 2213, 1643, 2213, 1503, 2139, 1503, 2139, 1458, 2212, 1458, 2212, 1138, 2139, 1138, 2139, 1093, 2213, 1093, 2213, 774)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallHitboxes"]
+[node name="OuterWalls" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(0, 1640, 2360, 1640, 2360, 0, 0, 0, 0, 1639, -7, 1639, -11, -30, 2397, -21, 2368, 1646, 0, 1647, -7, 1647, -7, 1639, 0, 1639)
 
 [node name="Letter_L" type="Area2D" parent="."]
