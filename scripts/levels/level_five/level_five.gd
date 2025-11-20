@@ -15,6 +15,8 @@ extends Node2D
 @onready var Jumpscare = $Jumpscare
 @onready var JumpscareSound = $Jumpscare/JumpscareSound
 
+@onready var Letha = $Letha
+
 
 var wall_touches = 0
 var RNG = RandomNumberGenerator.new()
@@ -30,8 +32,9 @@ func _process(_delta: float) -> void:
 	if has_M && has_O && has_T && has_H && has_E && has_R:
 		FinishPointMarker.visible = true
 		
-func _on_wall_hitboxes_body_entered(_body: Node2D) -> void:
+func _on_wall_hitboxes_body_entered(body: Node2D) -> void:
 	wall_touches += 1
+	print(body)
 	print("Wall Touches: ", wall_touches)
 	var chance = RNG.randi_range(1, 20)
 	print("Chance: " , chance)
@@ -42,34 +45,37 @@ func _on_wall_hitboxes_body_entered(_body: Node2D) -> void:
 		await get_tree().create_timer(1).timeout
 		JumpscareSound.stop()
 		Jumpscare.hide()
-	if wall_touches == 4:
-		LevelCounter.change_current_level(5)
-		AudioPlayer.playGameOver()
-		TransitionScene.change_scene_to_file("res://scenes/game_over.tscn")
 
-func _on_letter_m_body_entered(_body: Node2D) -> void:
-	has_M = true
-	Letter_M.visible = false
 
-func _on_letter_o_body_entered(_body: Node2D) -> void:
-	has_O = true
-	Letter_O.visible = false
+func _on_letter_m_body_entered(body: Node2D) -> void:
+	if body == Letha:
+		has_M = true
+		Letter_M.visible = false
 
-func _on_letter_t_body_entered(_body: Node2D) -> void:
-	has_T = true
-	Letter_T.visible = false
+func _on_letter_o_body_entered(body: Node2D) -> void:
+	if body == Letha:
+		has_O = true
+		Letter_O.visible = false
 
-func _on_letter_h_body_entered(_body: Node2D) -> void:
-	has_H = true
-	Letter_H.visible = false
+func _on_letter_t_body_entered(body: Node2D) -> void:
+	if body == Letha:
+		has_T = true
+		Letter_T.visible = false
 
-func _on_letter_e_body_entered(_body: Node2D) -> void:
-	has_E = true
-	Letter_E.visible = false
+func _on_letter_h_body_entered(body: Node2D) -> void:
+	if body == Letha:
+		has_H = true
+		Letter_H.visible = false
 
-func _on_letter_r_body_entered(_body: Node2D) -> void:
-	has_R = true
-	Letter_R.visible = false
+func _on_letter_e_body_entered(body: Node2D) -> void:
+	if body == Letha:
+		has_E = true
+		Letter_E.visible = false
+
+func _on_letter_r_body_entered(body: Node2D) -> void:
+	if body == Letha:
+		has_R = true
+		Letter_R.visible = false
 
 func _on_finish_point_body_entered(_body: Node2D) -> void:
 	if has_M && has_O && has_T && has_H && has_E && has_R:

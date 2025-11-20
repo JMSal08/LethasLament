@@ -242,6 +242,7 @@ position = Vector2(0, -8.749996)
 shape = SubResource("CapsuleShape2D_lfhuu")
 
 [node name="WallHitboxes" type="Area2D" parent="."]
+visible = false
 script = ExtResource("2_3h0b5")
 target_loc = Vector2(36, 44)
 
@@ -311,84 +312,126 @@ polygon = PackedVector2Array(1156, 912, 1157, 1640, 1204, 1640, 1204, 912)
 [node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(1156, 728, 1156, 0, 1204, 0, 1204, 728)
 
-[node name="WallHitboxes2" type="Area2D" parent="."]
-position = Vector2(2360, 0)
-scale = Vector2(-1, 1)
-script = ExtResource("2_3h0b5")
-target_loc = Vector2(36, 44)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(0, 91, 98, 91, 98, 121, 0, 121)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(271, 0, 271, 92, 173, 92, 173, 214, 75, 214, 75, 241, 195, 241, 195, 120, 294, 120, 294, 0)
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(0, 335, 97, 335, 97, 363, 0, 363)
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(0, 578, 75, 578, 75, 457, 173, 457, 173, 335, 272, 335, 272, 214, 370, 214, 370, 92, 392, 92, 392, 242, 294, 242, 294, 364, 196, 364, 196, 485, 98, 485, 98, 607, 0, 607)
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(74, 790, 74, 699, 196, 699, 196, 728, 98, 728, 98, 819, 0, 819, 0, 790)
-
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(74, 1033, 74, 912, 173, 912, 173, 821, 196, 821, 195, 940, 97, 940, 97, 1062, 0, 1062, 0, 1033)
-
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(74, 1276, 74, 1155, 173, 1155, 173, 1034, 272, 1034, 272, 913, 370, 913, 370, 821, 392, 821, 392, 940, 294, 940, 294, 1062, 196, 1062, 196, 1184, 98, 1184, 98, 1305, 0, 1305, 0, 1276)
-
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(75, 1548, 75, 1398, 173, 1398, 173, 1276, 271, 1276, 271, 1154, 369, 1154, 369, 1033, 468, 1033, 468, 821, 490, 821, 490, 912, 566, 912, 566, 821, 589, 821, 589, 941, 491, 941, 491, 1062, 393, 1062, 393, 1184, 295, 1184, 295, 1549, 195, 1549, 196, 1640, 172, 1640, 172, 1519, 271, 1519, 271, 1306, 196, 1306, 196, 1427, 98, 1427, 98, 1548)
-
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(173, 578, 271, 578, 271, 456, 369, 456, 369, 335, 468, 335, 468, -1, 491, -1, 491, 364, 393, 364, 393, 485, 295, 485, 294, 699, 491, 699, 491, 728, 295, 728, 294, 831, 271, 831, 271, 606, 173, 606)
-
-[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(566, 335, 665, 335, 665, 242, 566, 242, 566, 92, 712, 92, 712, 121, 589, 121, 589, 213, 688, 213, 688, 364, 566, 364)
-
-[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(788, 120, 788, 92, 861, 92, 861, -1, 884, -1, 884, 121, 860, 121, 860, 151, 837, 151, 837, 121)
-
-[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(566, 1519, 688, 1519, 688, 1548, 590, 1548, 590, 1642, 566, 1642)
-
-[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(370, 1520, 468, 1520, 468, 1398, 566, 1398, 566, 1276, 589, 1276, 589, 1427, 491, 1427, 491, 1548, 370, 1548)
-
-[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(370, 1426, 370, 1277, 468, 1277, 468, 1155, 566, 1155, 567, 1033, 589, 1033, 589, 1156, 763, 1156, 763, 1033, 861, 1033, 861, 912, 983, 912, 983, 941, 885, 941, 885, 1062, 786, 1062, 786, 1183, 688, 1183, 688, 1214, 664, 1214, 664, 1183, 491, 1183, 491, 1305, 392, 1305, 392, 1426)
-
-[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(665, 1258, 687, 1258, 687, 1398, 960, 1398, 960, 1277, 982, 1277, 982, 1426, 884, 1426, 884, 1548, 763, 1548, 763, 1519, 861, 1519, 861, 1426, 664, 1427)
-
-[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(960, 1520, 1058, 1520, 1058, 1276, 1081, 1276, 1081, 1548, 960, 1548)
-
-[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(369, 578, 468, 578, 468, 456, 491, 456, 491, 578, 567, 578, 567, 457, 763, 457, 763, 335, 812, 335, 812, 242, 763, 242, 763, 213, 836, 213, 836, 183, 860, 183, 860, 213, 1001, 213, 1001, 242, 835, 242, 835, 335, 884, 335, 884, 363, 786, 363, 786, 485, 589, 485, 589, 699, 688, 699, 688, 819, 664, 819, 664, 728, 566, 728, 566, 607, 369, 607)
-
-[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(959, 92, 1081, 92, 1081, 364, 983, 364, 983, 577, 1057, 577, 1058, 456, 1081, 456, 1081, 912, 1156, 912, 1156, 941, 1058, 941, 1058, 728, 911, 728, 911, 700, 1058, 700, 1058, 606, 935, 606, 935, 578, 960, 578, 960, 485, 861, 485, 861, 456, 959, 456, 959, 335, 1058, 335, 1058, 121, 959, 121)
-
-[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(763, 1276, 861, 1276, 861, 1155, 959, 1155, 959, 1033, 1081, 1033, 1081, 1062, 983, 1062, 983, 1155, 1156, 1155, 1156, 1184, 884, 1184, 884, 1304, 763, 1304)
-
-[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(665, 1062, 687, 1062, 687, 940, 785, 940, 785, 849, 982, 849, 982, 821, 785, 821, 785, 727, 835, 727, 835, 699, 761, 700, 761, 606, 884, 606, 884, 578, 665, 578, 665, 606, 739, 606, 739, 728, 763, 728, 763, 912, 666, 912)
-
-[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(1156, 912, 1157, 1640, 1204, 1640, 1204, 912)
-
-[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="WallHitboxes2"]
-polygon = PackedVector2Array(1156, 728, 1156, 0, 1204, 0, 1204, 728)
-
 [node name="OuterWallsHitbox" type="Area2D" parent="."]
+visible = false
 script = ExtResource("2_3h0b5")
 target_loc = Vector2(36, 44)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OuterWallsHitbox"]
 polygon = PackedVector2Array(0, 1640, 2360, 1640, 2360, 0, 0, 0, 0, 1637, -2, 1637, -2, -2, 2361, -2, 2362, 1644, -2, 1643, -2, 1637, 0, 1637)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(0, 91, 98, 91, 98, 121, 0, 121)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(271, 0, 271, 92, 173, 92, 173, 214, 75, 214, 75, 241, 195, 241, 195, 120, 294, 120, 294, 0)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(0, 335, 97, 335, 97, 363, 0, 363)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(0, 578, 75, 578, 75, 457, 173, 457, 173, 335, 272, 335, 272, 214, 370, 214, 370, 92, 392, 92, 392, 242, 294, 242, 294, 364, 196, 364, 196, 485, 98, 485, 98, 607, 0, 607)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(74, 790, 74, 699, 196, 699, 196, 728, 98, 728, 98, 819, 0, 819, 0, 790)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(74, 1033, 74, 912, 173, 912, 173, 821, 196, 821, 195, 940, 97, 940, 97, 1062, 0, 1062, 0, 1033)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(74, 1276, 74, 1155, 173, 1155, 173, 1034, 272, 1034, 272, 913, 370, 913, 370, 821, 392, 821, 392, 940, 294, 940, 294, 1062, 196, 1062, 196, 1184, 98, 1184, 98, 1305, 0, 1305, 0, 1276)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(75, 1548, 75, 1398, 173, 1398, 173, 1276, 271, 1276, 271, 1154, 369, 1154, 369, 1033, 468, 1033, 468, 821, 490, 821, 490, 912, 566, 912, 566, 821, 589, 821, 589, 941, 491, 941, 491, 1062, 393, 1062, 393, 1184, 295, 1184, 295, 1549, 195, 1549, 196, 1640, 172, 1640, 172, 1519, 271, 1519, 271, 1306, 196, 1306, 196, 1427, 98, 1427, 98, 1548)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(173, 578, 271, 578, 271, 456, 369, 456, 369, 335, 468, 335, 468, -1, 491, -1, 491, 364, 393, 364, 393, 485, 295, 485, 294, 699, 491, 699, 491, 728, 295, 728, 294, 831, 271, 831, 271, 606, 173, 606)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(566, 335, 665, 335, 665, 242, 566, 242, 566, 92, 712, 92, 712, 121, 589, 121, 589, 213, 688, 213, 688, 364, 566, 364)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(788, 120, 788, 92, 861, 92, 861, -1, 884, -1, 884, 121, 860, 121, 860, 151, 837, 151, 837, 121)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(566, 1519, 688, 1519, 688, 1548, 590, 1548, 590, 1642, 566, 1642)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(370, 1520, 468, 1520, 468, 1398, 566, 1398, 566, 1276, 589, 1276, 589, 1427, 491, 1427, 491, 1548, 370, 1548)
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(370, 1426, 370, 1277, 468, 1277, 468, 1155, 566, 1155, 567, 1033, 589, 1033, 589, 1156, 763, 1156, 763, 1033, 861, 1033, 861, 912, 983, 912, 983, 941, 885, 941, 885, 1062, 786, 1062, 786, 1183, 688, 1183, 688, 1214, 664, 1214, 664, 1183, 491, 1183, 491, 1305, 392, 1305, 392, 1426)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(665, 1258, 687, 1258, 687, 1398, 960, 1398, 960, 1277, 982, 1277, 982, 1426, 884, 1426, 884, 1548, 763, 1548, 763, 1519, 861, 1519, 861, 1426, 664, 1427)
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(960, 1520, 1058, 1520, 1058, 1276, 1081, 1276, 1081, 1548, 960, 1548)
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(369, 578, 468, 578, 468, 456, 491, 456, 491, 578, 567, 578, 567, 457, 763, 457, 763, 335, 812, 335, 812, 242, 763, 242, 763, 213, 836, 213, 836, 183, 860, 183, 860, 213, 1001, 213, 1001, 242, 835, 242, 835, 335, 884, 335, 884, 363, 786, 363, 786, 485, 589, 485, 589, 699, 688, 699, 688, 819, 664, 819, 664, 728, 566, 728, 566, 607, 369, 607)
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(959, 92, 1081, 92, 1081, 364, 983, 364, 983, 577, 1057, 577, 1058, 456, 1081, 456, 1081, 912, 1156, 912, 1156, 941, 1058, 941, 1058, 728, 911, 728, 911, 700, 1058, 700, 1058, 606, 935, 606, 935, 578, 960, 578, 960, 485, 861, 485, 861, 456, 959, 456, 959, 335, 1058, 335, 1058, 121, 959, 121)
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(763, 1276, 861, 1276, 861, 1155, 959, 1155, 959, 1033, 1081, 1033, 1081, 1062, 983, 1062, 983, 1155, 1156, 1155, 1156, 1184, 884, 1184, 884, 1304, 763, 1304)
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(665, 1062, 687, 1062, 687, 940, 785, 940, 785, 849, 982, 849, 982, 821, 785, 821, 785, 727, 835, 727, 835, 699, 761, 700, 761, 606, 884, 606, 884, 578, 665, 578, 665, 606, 739, 606, 739, 728, 763, 728, 763, 912, 666, 912)
+
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(1156, 912, 1157, 1640, 1204, 1640, 1204, 912)
+
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2359.9, -0.3999939)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(1156, 728, 1156, 0, 1204, 0, 1204, 728)
 
 [node name="Letter_M" type="Area2D" parent="."]
 position = Vector2(1190, 831)
@@ -483,10 +526,142 @@ text = "Go Here"
 [node name="Jumpscare" parent="." instance=ExtResource("18_nuvms")]
 visible = false
 
+[node name="MirroredWallHitboxes" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(0, 91, 98, 91, 98, 121, 0, 121)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(271, 0, 271, 92, 173, 92, 173, 214, 75, 214, 75, 241, 195, 241, 195, 120, 294, 120, 294, 0)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(0, 335, 97, 335, 97, 363, 0, 363)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(0, 578, 75, 578, 75, 457, 173, 457, 173, 335, 272, 335, 272, 214, 370, 214, 370, 92, 392, 92, 392, 242, 294, 242, 294, 364, 196, 364, 196, 485, 98, 485, 98, 607, 0, 607)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(74, 790, 74, 699, 196, 699, 196, 728, 98, 728, 98, 819, 0, 819, 0, 790)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(74, 1033, 74, 912, 173, 912, 173, 821, 196, 821, 195, 940, 97, 940, 97, 1062, 0, 1062, 0, 1033)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(74, 1276, 74, 1155, 173, 1155, 173, 1034, 272, 1034, 272, 913, 370, 913, 370, 821, 392, 821, 392, 940, 294, 940, 294, 1062, 196, 1062, 196, 1184, 98, 1184, 98, 1305, 0, 1305, 0, 1276)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(75, 1548, 75, 1398, 173, 1398, 173, 1276, 271, 1276, 271, 1154, 369, 1154, 369, 1033, 468, 1033, 468, 821, 490, 821, 490, 912, 566, 912, 566, 821, 589, 821, 589, 941, 491, 941, 491, 1062, 393, 1062, 393, 1184, 295, 1184, 295, 1549, 195, 1549, 196, 1640, 172, 1640, 172, 1519, 271, 1519, 271, 1306, 196, 1306, 196, 1427, 98, 1427, 98, 1548)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(173, 578, 271, 578, 271, 456, 369, 456, 369, 335, 468, 335, 468, -1, 491, -1, 491, 364, 393, 364, 393, 485, 295, 485, 294, 699, 491, 699, 491, 728, 295, 728, 294, 831, 271, 831, 271, 606, 173, 606)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(566, 335, 665, 335, 665, 242, 566, 242, 566, 92, 712, 92, 712, 121, 589, 121, 589, 213, 688, 213, 688, 364, 566, 364)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(788, 120, 788, 92, 861, 92, 861, -1, 884, -1, 884, 121, 860, 121, 860, 151, 837, 151, 837, 121)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(566, 1519, 688, 1519, 688, 1548, 590, 1548, 590, 1642, 566, 1642)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(370, 1520, 468, 1520, 468, 1398, 566, 1398, 566, 1276, 589, 1276, 589, 1427, 491, 1427, 491, 1548, 370, 1548)
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(370, 1426, 370, 1277, 468, 1277, 468, 1155, 566, 1155, 567, 1033, 589, 1033, 589, 1156, 763, 1156, 763, 1033, 861, 1033, 861, 912, 983, 912, 983, 941, 885, 941, 885, 1062, 786, 1062, 786, 1183, 688, 1183, 688, 1214, 664, 1214, 664, 1183, 491, 1183, 491, 1305, 392, 1305, 392, 1426)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(665, 1258, 687, 1258, 687, 1398, 960, 1398, 960, 1277, 982, 1277, 982, 1426, 884, 1426, 884, 1548, 763, 1548, 763, 1519, 861, 1519, 861, 1426, 664, 1427)
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(960, 1520, 1058, 1520, 1058, 1276, 1081, 1276, 1081, 1548, 960, 1548)
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(369, 578, 468, 578, 468, 456, 491, 456, 491, 578, 567, 578, 567, 457, 763, 457, 763, 335, 812, 335, 812, 242, 763, 242, 763, 213, 836, 213, 836, 183, 860, 183, 860, 213, 1001, 213, 1001, 242, 835, 242, 835, 335, 884, 335, 884, 363, 786, 363, 786, 485, 589, 485, 589, 699, 688, 699, 688, 819, 664, 819, 664, 728, 566, 728, 566, 607, 369, 607)
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(959, 92, 1081, 92, 1081, 364, 983, 364, 983, 577, 1057, 577, 1058, 456, 1081, 456, 1081, 912, 1156, 912, 1156, 941, 1058, 941, 1058, 728, 911, 728, 911, 700, 1058, 700, 1058, 606, 935, 606, 935, 578, 960, 578, 960, 485, 861, 485, 861, 456, 959, 456, 959, 335, 1058, 335, 1058, 121, 959, 121)
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(763, 1276, 861, 1276, 861, 1155, 959, 1155, 959, 1033, 1081, 1033, 1081, 1062, 983, 1062, 983, 1155, 1156, 1155, 1156, 1184, 884, 1184, 884, 1304, 763, 1304)
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(665, 1062, 687, 1062, 687, 940, 785, 940, 785, 849, 982, 849, 982, 821, 785, 821, 785, 727, 835, 727, 835, 699, 761, 700, 761, 606, 884, 606, 884, 578, 665, 578, 665, 606, 739, 606, 739, 728, 763, 728, 763, 912, 666, 912)
+
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(1156, 912, 1157, 1640, 1204, 1640, 1204, 912)
+
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="MirroredWallHitboxes"]
+position = Vector2(2359.9, -0.3999939)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(1156, 728, 1156, 0, 1204, 0, 1204, 728)
+
 [connection signal="body_entered" from="WallHitboxes" to="." method="_on_wall_hitboxes_body_entered"]
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
-[connection signal="body_entered" from="WallHitboxes2" to="." method="_on_wall_hitboxes_body_entered"]
-[connection signal="body_entered" from="WallHitboxes2" to="WallHitboxes2" method="_on_body_entered"]
 [connection signal="body_entered" from="OuterWallsHitbox" to="." method="_on_wall_hitboxes_body_entered"]
 [connection signal="body_entered" from="OuterWallsHitbox" to="OuterWallsHitbox" method="_on_body_entered"]
 [connection signal="body_entered" from="Letter_M" to="." method="_on_letter_m_body_entered"]
@@ -496,3 +671,4 @@ visible = false
 [connection signal="body_entered" from="Letter_E" to="." method="_on_letter_e_body_entered"]
 [connection signal="body_entered" from="Letter_R" to="." method="_on_letter_r_body_entered"]
 [connection signal="body_entered" from="FinishPoint" to="." method="_on_finish_point_body_entered"]
+[connection signal="body_entered" from="MirroredWallHitboxes" to="." method="_on_wall_hitboxes_body_entered"]
