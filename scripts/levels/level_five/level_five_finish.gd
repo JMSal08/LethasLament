@@ -29,7 +29,7 @@ func _on_answer_button_pressed() -> void:
 					if SlotFive.texture == E_Texture:
 						if SlotSix.texture == R_Texture:
 							AudioPlayer.playCutscene()
-							TransitionScene.change_scene_to_file("res://scenes/cutscene/cutscene.tscn")
+							get_tree().change_scene_to_file("res://scenes/misc/finish_screen.tscn")
 
 func _on_reset_button_pressed() -> void:
 	SlotOne.texture = null

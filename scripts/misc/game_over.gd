@@ -30,4 +30,5 @@ func _on_retry_button_pressed() -> void:
 		TransitionScene.change_scene_to_file("res://scenes/levels/level_one.tscn")
 
 func _on_back_to_main_pressed() -> void:
+	AudioPlayer.playMainMenu()
 	TransitionScene.change_scene_to_file("res://scenes/main_menu.tscn")

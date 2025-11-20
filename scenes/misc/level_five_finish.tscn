@@ -20,6 +20,7 @@ texture = ExtResource("1_y0kpx")
 script = ExtResource("1_p107o")
 
 [node name="Panel" type="Panel" parent="."]
+modulate = Color(0.2159017, 0.21590173, 0.2159017, 1)
 offset_right = 2360.0
 offset_bottom = 1640.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_kdan5")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqwpd6th6nc6d"]
+
+[ext_resource type="Texture2D" uid="uid://bpvf1wft3dxcb" path="res://assets/misc/Mother glitch lvl 5.png" id="1_fn40l"]
+[ext_resource type="Script" uid="uid://3r81v2hyufph" path="res://scenes/misc/finish_screen.gd" id="1_t62qa"]
+[ext_resource type="AudioStream" uid="uid://k0cq0xpy0hm6" path="res://scenes/audio/audio_files/hairdryer.mp3" id="2_t62qa"]
+
+[node name="FinishScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t62qa")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 2360.0
+offset_bottom = 1640.0
+texture = ExtResource("1_fn40l")
+
+[node name="FinishSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_t62qa")

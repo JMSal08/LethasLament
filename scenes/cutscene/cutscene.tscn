@@ -31,7 +31,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_xnop0"]
 resource_name = "play_cutscene"
-length = 24.0
+length = 36.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -39,7 +39,7 @@ tracks/0/path = NodePath("TextureRect:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24),
+"times": PackedFloat32Array(3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("1_8q74e"), ExtResource("2_0ja7w"), ExtResource("3_dcrsd"), ExtResource("4_28fbx"), ExtResource("5_1sb0e"), ExtResource("6_ba7j3"), ExtResource("7_rc8d0"), ExtResource("8_wdlpo"), ExtResource("9_q6cnp"), ExtResource("10_tpfpr"), ExtResource("11_b4xoi"), ExtResource("12_ou2no")]
