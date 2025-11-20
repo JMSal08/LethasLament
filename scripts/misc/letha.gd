@@ -6,16 +6,20 @@ extends CharacterBody2D
 
 func _physics_process(_delta: float) -> void:
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	#print(input_direction) # for debug only
+	print(input_direction) # for debug only
 	velocity = input_direction * speed
-	if input_direction == Vector2(0,1):
+	if Input.is_action_pressed("down") && Input.is_action_pressed("left"):
+		animated_sprite.play("left")
+	elif  Input.is_action_pressed("down") && Input.is_action_pressed("right"):
+		animated_sprite.play("right")
+	elif Input.is_action_pressed("down"):
 		animated_sprite.play("down")
-	elif input_direction == Vector2(0,-1):
-		pass #Put animated up here
-	elif input_direction == Vector2(1,0):
-		pass # Put animated right here
-	elif  input_direction == Vector2(-1,0):
-		pass # Put animated left here
+	elif Input.is_action_pressed("up"):
+		pass
+	elif Input.is_action_pressed("right"):
+		animated_sprite.play("right")
+	elif Input.is_action_pressed("left"):
+		animated_sprite.play("left")
 	else:
 		animated_sprite.play("default") # Plays default animation
 	
