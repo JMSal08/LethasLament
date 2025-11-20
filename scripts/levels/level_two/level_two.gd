@@ -42,6 +42,7 @@ func _on_wall_hitboxes_body_entered(_body: Node2D) -> void:
 		SpeechBox.hide()
 	elif wall_touches == 4:
 		LevelCounter.change_current_level(2)
+		AudioPlayer.playGameOver()
 		TransitionScene.change_scene_to_file("res://scenes/game_over.tscn")
 
 func _on_letter_d_body_entered(_body: Node2D) -> void:

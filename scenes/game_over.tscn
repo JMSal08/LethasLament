@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dn1mywfdxd6ty"]
+[gd_scene load_steps=14 format=3 uid="uid://dn1mywfdxd6ty"]
 
 [ext_resource type="Script" uid="uid://b7iqsi0s0uh3i" path="res://scripts/misc/game_over.gd" id="1_racf3"]
 [ext_resource type="Texture2D" uid="uid://d4cx4owtii4fd" path="res://assets/misc/hate.png" id="1_wqhvx"]
 [ext_resource type="FontFile" uid="uid://cppm2tf24r5fa" path="res://fonts/Zombies Brainless.otf" id="2_tbwuq"]
 [ext_resource type="FontFile" uid="uid://cop50paopfx11" path="res://fonts/Saphifen.otf" id="3_tbwuq"]
+[ext_resource type="FontFile" uid="uid://be2b448sm6xoy" path="res://fonts/RobloxFont-Regular.ttf" id="5_7m3ot"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_racf3"]
 
@@ -12,6 +13,14 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7m3ot"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3hpu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irg28"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2jtsn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8bugq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wawo4"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -62,4 +71,19 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_7m3ot")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_v3hpu")
 text = "Retry"
 
+[node name="BackToMain" type="Button" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 591.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("5_7m3ot")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxEmpty_irg28")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2jtsn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8bugq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wawo4")
+text = "Back to Main Menu"
+
 [connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="BackToMain" to="." method="_on_back_to_main_pressed"]

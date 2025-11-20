@@ -23,8 +23,11 @@ func _on_retry_button_pressed() -> void:
 	elif current_level == 5:
 		print("Retry to level five")
 		AudioPlayer.playLevelFive()
-		pass # Put Level 5 Here!
+		TransitionScene.change_scene_to_file("res://scenes/levels/level_five.tscn")
 	else:
 		AudioPlayer.playLevelOne()
 		print("Else statement: retry to level one")
 		TransitionScene.change_scene_to_file("res://scenes/levels/level_one.tscn")
+
+func _on_back_to_main_pressed() -> void:
+	TransitionScene.change_scene_to_file("res://scenes/main_menu.tscn")

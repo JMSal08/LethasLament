@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dd16j3wotjuev" path="res://scenes/misc/slot.tscn" id="3_q57fn"]
 [ext_resource type="Texture2D" uid="uid://d27p1lwllw2u5" path="res://assets/letters/O.png" id="5_0ya6m"]
 [ext_resource type="Texture2D" uid="uid://oe72qv4tbt7d" path="res://assets/letters/D.png" id="7_q57fn"]
-[ext_resource type="Texture2D" uid="uid://blgsyj48ruit3" path="res://assets/levels/level_one/images/Cat_lvl1.png" id="7_tp17s"]
 [ext_resource type="FontFile" uid="uid://celc3h3f87gce" path="res://fonts/Super Joyful.ttf" id="8_4kaq3"]
 [ext_resource type="Texture2D" uid="uid://bmal2u03gvj8i" path="res://assets/letters/G.png" id="8_ndq4u"]
+[ext_resource type="Texture2D" uid="uid://ccew82i5ockqy" path="res://assets/levels/level_two/Dog.png" id="9_q57fn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tp17s"]
 texture = ExtResource("1_q57fn")
@@ -132,7 +132,7 @@ offset_top = 227.99998
 offset_right = 5258.0
 offset_bottom = 3492.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("7_tp17s")
+texture = ExtResource("9_q57fn")
 
 [node name="AnswerButton" type="Button" parent="."]
 offset_left = 1110.0

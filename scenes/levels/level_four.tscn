@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://carj3mxgjgman"]
+[gd_scene load_steps=51 format=3 uid="uid://carj3mxgjgman"]
 
 [ext_resource type="Texture2D" uid="uid://d2i4difpj63ux" path="res://assets/levels/level_four/images/level4.png" id="1_nqkga"]
 [ext_resource type="Script" uid="uid://dkgc363ved7ry" path="res://scripts/levels/level_four/level_four.gd" id="1_yo0l4"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://dxxch5offxc4n" path="res://assets/letters/H.png" id="10_nfdlx"]
 [ext_resource type="Texture2D" uid="uid://d18kv5dr0oe1r" path="res://assets/letters/A.png" id="11_u0q4c"]
 [ext_resource type="PackedScene" uid="uid://ddpv6csw1thg" path="res://scenes/misc/level_four_finish.tscn" id="13_nfdlx"]
+[ext_resource type="FontFile" uid="uid://cbx067530bvx2" path="res://fonts/Spicy Sale.otf" id="14_ds3o7"]
+[ext_resource type="PackedScene" uid="uid://yqfm8yvo7b1j" path="res://scenes/misc/jumpscare.tscn" id="15_uacu3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yo0l4"]
 radius = 12.5
@@ -207,10 +209,61 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sp7xj"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuav1"]
+atlas = ExtResource("4_87pl0")
+region = Rect2(0, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr121"]
+atlas = ExtResource("4_87pl0")
+region = Rect2(1920, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrkh3"]
+atlas = ExtResource("4_87pl0")
+region = Rect2(3840, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ok73"]
+atlas = ExtResource("4_87pl0")
+region = Rect2(5760, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv3dl"]
+atlas = ExtResource("4_87pl0")
+region = Rect2(7680, 0, 1920, 1640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oivd"]
+atlas = ExtResource("4_87pl0")
+region = Rect2(9600, 0, 1920, 1640)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uacu3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iuav1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yr121")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrkh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ok73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv3dl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6oivd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="LevelFour" type="Node2D"]
 script = ExtResource("1_yo0l4")
 
 [node name="MapTexture" type="TextureRect" parent="."]
+modulate = Color(0.53303635, 0.5330368, 0.5330365, 1)
 offset_right = 2360.0
 offset_bottom = 1640.0
 texture = ExtResource("1_nqkga")
@@ -400,6 +453,32 @@ polygon = PackedVector2Array(1998, 874, 2027, 874, 2027, 1026, 2121, 1026, 2121,
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(0, 1062, 0, 1640, 2360, 1640, 2360, 1026, 2371, 1026, 2371, 907, 2360, 907, 2360, 0, 0, 0, 0, 907, -10, 907, -10, 1029, -3, 1029, 0, 1060, -19, 1060, -18, -10, 2402, -27, 2406, 1691, -33, 1680, -19, 1063)
 
+[node name="SpeechBox" type="Panel" parent="."]
+visible = false
+offset_left = 316.0
+offset_top = 1100.0
+offset_right = 2046.0
+offset_bottom = 1600.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpeechBox"]
+position = Vector2(196, 241)
+scale = Vector2(1.3, 1.3)
+sprite_frames = SubResource("SpriteFrames_uacu3")
+autoplay = "default"
+
+[node name="Warning" type="Label" parent="SpeechBox"]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 93.0
+offset_right = 1327.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("14_ds3o7")
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+
+[node name="Jumpscare" parent="." instance=ExtResource("15_uacu3")]
+visible = false
+
 [node name="LevelFourFinish" parent="." instance=ExtResource("13_nfdlx")]
 visible = false
 
@@ -421,4 +500,5 @@ text = "Go Here"
 [connection signal="body_entered" from="TPAreaOne" to="." method="_on_tp_area_one_body_entered"]
 [connection signal="body_entered" from="TPAreaTwo" to="." method="_on_tp_area_two_body_entered"]
 [connection signal="body_entered" from="FinishPoint" to="." method="_on_finish_point_body_entered"]
+[connection signal="body_entered" from="WallHitboxes" to="." method="_on_wall_hitboxes_body_entered"]
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]

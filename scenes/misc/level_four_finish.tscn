@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bli45qy61oaaj" path="res://scripts/levels/level_four/level_four_finish.gd" id="1_6pkka"]
 [ext_resource type="Texture2D" uid="uid://d2i4difpj63ux" path="res://assets/levels/level_four/images/level4.png" id="1_jcvcf"]
-[ext_resource type="Texture2D" uid="uid://blgsyj48ruit3" path="res://assets/levels/level_one/images/Cat_lvl1.png" id="2_w1mdl"]
+[ext_resource type="Texture2D" uid="uid://0eoojv0jyj83" path="res://assets/levels/level_four/images/Hate.png" id="3_6pkka"]
 [ext_resource type="PackedScene" uid="uid://dd16j3wotjuev" path="res://scenes/misc/slot.tscn" id="3_u6q7w"]
 [ext_resource type="Texture2D" uid="uid://cf67d6gir764i" path="res://assets/letters/E.png" id="4_txvlv"]
 [ext_resource type="Texture2D" uid="uid://dxxch5offxc4n" path="res://assets/letters/H.png" id="5_dcctg"]
@@ -27,7 +27,7 @@ offset_top = 227.99998
 offset_right = 5258.0
 offset_bottom = 3492.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_w1mdl")
+texture = ExtResource("3_6pkka")
 
 [node name="Letter_E" parent="." instance=ExtResource("3_u6q7w")]
 offset_left = 1700.0

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d27p1lwllw2u5" path="res://assets/letters/O.png" id="6_1v2t1"]
 [ext_resource type="Texture2D" uid="uid://bgbb6j38atbcw" path="res://assets/letters/L.png" id="6_pxiuq"]
 [ext_resource type="Texture2D" uid="uid://biljtxddthxsx" path="res://assets/letters/V.png" id="7_4ejdu"]
-[ext_resource type="Texture2D" uid="uid://blgsyj48ruit3" path="res://assets/levels/level_one/images/Cat_lvl1.png" id="9_v0lq3"]
+[ext_resource type="Texture2D" uid="uid://c2b7xy5pwcvcv" path="res://assets/levels/level_three/images/Love.png" id="8_fbgty"]
 [ext_resource type="FontFile" uid="uid://celc3h3f87gce" path="res://fonts/Super Joyful.ttf" id="10_f0k7s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbowp"]
@@ -88,7 +88,7 @@ offset_top = 227.99998
 offset_right = 5258.0
 offset_bottom = 3492.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("9_v0lq3")
+texture = ExtResource("8_fbgty")
 
 [node name="AnswerButton" type="Button" parent="."]
 offset_left = 1110.0

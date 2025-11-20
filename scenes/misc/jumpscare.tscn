@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://yqfm8yvo7b1j"]
+
+[ext_resource type="Texture2D" uid="uid://ipdd16kogu4u" path="res://assets/misc/Jumpscare.png" id="1_cjm8t"]
+
+[node name="Jumpscare" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 2360.0
+offset_bottom = 1640.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -453.0
+offset_top = 6.0
+offset_right = 6067.0
+offset_bottom = 3278.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_cjm8t")
+
+[node name="JumpscareSound" type="AudioStreamPlayer2D" parent="."]

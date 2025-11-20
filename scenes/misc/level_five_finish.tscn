@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://csyjsjcy5b5xi" path="res://scripts/levels/level_five/level_five_finish.gd" id="1_p107o"]
 [ext_resource type="Texture2D" uid="uid://b6fhlygqcqkmn" path="res://assets/levels/level_five/images/LEVEL5.png" id="1_y0kpx"]
-[ext_resource type="Texture2D" uid="uid://blgsyj48ruit3" path="res://assets/levels/level_one/images/Cat_lvl1.png" id="2_g1r65"]
 [ext_resource type="PackedScene" uid="uid://dd16j3wotjuev" path="res://scenes/misc/slot.tscn" id="3_6s3eq"]
+[ext_resource type="Texture2D" uid="uid://cqhfrrk638bea" path="res://assets/levels/level_five/images/Mother lvl 5.png" id="3_p107o"]
 [ext_resource type="Texture2D" uid="uid://cf67d6gir764i" path="res://assets/letters/E.png" id="4_c6rb8"]
 [ext_resource type="Texture2D" uid="uid://dxxch5offxc4n" path="res://assets/letters/H.png" id="5_p107o"]
 [ext_resource type="Texture2D" uid="uid://co0ngm2gkv3yo" path="res://assets/letters/T.png" id="6_eit3h"]
@@ -30,7 +30,7 @@ offset_top = 227.99998
 offset_right = 5258.0
 offset_bottom = 3492.0
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_g1r65")
+texture = ExtResource("3_p107o")
 
 [node name="Letter_E" parent="." instance=ExtResource("3_6s3eq")]
 offset_left = 1700.0

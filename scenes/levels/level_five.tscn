@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b2c8a2k7lb85e"]
+[gd_scene load_steps=45 format=3 uid="uid://b2c8a2k7lb85e"]
 
 [ext_resource type="Texture2D" uid="uid://b6fhlygqcqkmn" path="res://assets/levels/level_five/images/LEVEL5.png" id="1_f3q0l"]
 [ext_resource type="Script" uid="uid://cgblu3ywa3ews" path="res://scripts/levels/level_five/level_five.gd" id="1_oxvxf"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://scy7b0de1vix" path="res://assets/letters/R.png" id="8_iwt7n"]
 [ext_resource type="Texture2D" uid="uid://x78lydx6pbhm" path="res://assets/sprites/up_spritesheet.png" id="8_oi3op"]
 [ext_resource type="FontFile" uid="uid://dxk76a2ryw1iv" path="res://fonts/Bigbesty.otf" id="10_5ngdu"]
+[ext_resource type="PackedScene" uid="uid://da6dolnu6a1vw" path="res://scenes/misc/level_five_finish.tscn" id="16_ychwj"]
+[ext_resource type="PackedScene" uid="uid://yqfm8yvo7b1j" path="res://scenes/misc/jumpscare.tscn" id="18_nuvms"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
 atlas = ExtResource("4_1jg27")
@@ -464,6 +466,9 @@ shape = SubResource("CircleShape2D_ov50f")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FinishPoint"]
 polygon = PackedVector2Array(1155, 728, 1081, 728, 1081, 912, 1279, 912, 1279, 728, 1204, 728)
 
+[node name="LevelFiveFinish" parent="." instance=ExtResource("16_ychwj")]
+visible = false
+
 [node name="FinishPointMarker" type="Label" parent="."]
 visible = false
 offset_left = 1061.0
@@ -475,8 +480,14 @@ theme_override_fonts/font = ExtResource("10_5ngdu")
 theme_override_font_sizes/font_size = 60
 text = "Go Here"
 
+[node name="Jumpscare" parent="." instance=ExtResource("18_nuvms")]
+visible = false
+
+[connection signal="body_entered" from="WallHitboxes" to="." method="_on_wall_hitboxes_body_entered"]
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]
+[connection signal="body_entered" from="WallHitboxes2" to="." method="_on_wall_hitboxes_body_entered"]
 [connection signal="body_entered" from="WallHitboxes2" to="WallHitboxes2" method="_on_body_entered"]
+[connection signal="body_entered" from="OuterWallsHitbox" to="." method="_on_wall_hitboxes_body_entered"]
 [connection signal="body_entered" from="OuterWallsHitbox" to="OuterWallsHitbox" method="_on_body_entered"]
 [connection signal="body_entered" from="Letter_M" to="." method="_on_letter_m_body_entered"]
 [connection signal="body_entered" from="Letter_O" to="." method="_on_letter_o_body_entered"]
@@ -484,3 +495,4 @@ text = "Go Here"
 [connection signal="body_entered" from="Letter_H" to="." method="_on_letter_h_body_entered"]
 [connection signal="body_entered" from="Letter_E" to="." method="_on_letter_e_body_entered"]
 [connection signal="body_entered" from="Letter_R" to="." method="_on_letter_r_body_entered"]
+[connection signal="body_entered" from="FinishPoint" to="." method="_on_finish_point_body_entered"]
