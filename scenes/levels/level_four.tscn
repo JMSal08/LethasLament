@@ -1,12 +1,19 @@
-[gd_scene load_steps=29 format=3 uid="uid://carj3mxgjgman"]
+[gd_scene load_steps=37 format=3 uid="uid://carj3mxgjgman"]
 
 [ext_resource type="Texture2D" uid="uid://d2i4difpj63ux" path="res://assets/levels/level_four/images/level4.png" id="1_nqkga"]
+[ext_resource type="Script" uid="uid://dkgc363ved7ry" path="res://scripts/levels/level_four/level_four.gd" id="1_yo0l4"]
 [ext_resource type="Script" uid="uid://bf6eu0unpvllc" path="res://scripts/levels/misc/wall_hitboxes.gd" id="2_asnl3"]
 [ext_resource type="Script" uid="uid://grtpnlr62vrt" path="res://scripts/misc/letha.gd" id="3_8xs88"]
 [ext_resource type="Texture2D" uid="uid://cc3gt31qpqnto" path="res://assets/sprites/idle_spritesheet.png" id="4_87pl0"]
 [ext_resource type="Texture2D" uid="uid://b5d8dd44caygq" path="res://assets/sprites/down_spritesheet.png" id="5_r5fkw"]
 [ext_resource type="Texture2D" uid="uid://cwx4lu8kuvnkv" path="res://assets/sprites/left_spritesheet.png" id="6_pxb0e"]
 [ext_resource type="Texture2D" uid="uid://bs3nv8ht1a1pp" path="res://assets/sprites/right_spritesheet.png" id="7_1jjpu"]
+[ext_resource type="FontFile" uid="uid://dxk76a2ryw1iv" path="res://fonts/Bigbesty.otf" id="8_87pl0"]
+[ext_resource type="Texture2D" uid="uid://cf67d6gir764i" path="res://assets/letters/E.png" id="8_io2eb"]
+[ext_resource type="Texture2D" uid="uid://co0ngm2gkv3yo" path="res://assets/letters/T.png" id="9_yo0l4"]
+[ext_resource type="Texture2D" uid="uid://dxxch5offxc4n" path="res://assets/letters/H.png" id="10_nfdlx"]
+[ext_resource type="Texture2D" uid="uid://d18kv5dr0oe1r" path="res://assets/letters/A.png" id="11_u0q4c"]
+[ext_resource type="PackedScene" uid="uid://ddpv6csw1thg" path="res://scenes/misc/level_four_finish.tscn" id="13_nfdlx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6gv3"]
 atlas = ExtResource("4_87pl0")
@@ -164,12 +171,97 @@ radius = 12.5
 radius = 25.454544
 height = 97.5
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_sp7xj"]
+
 [node name="LevelFour" type="Node2D"]
+script = ExtResource("1_yo0l4")
 
 [node name="MapTexture" type="TextureRect" parent="."]
 offset_right = 2360.0
 offset_bottom = 1640.0
 texture = ExtResource("1_nqkga")
+
+[node name="Letha" type="CharacterBody2D" parent="."]
+position = Vector2(160, 1115)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("3_8xs88")
+speed = 150
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Letha"]
+position = Vector2(-0.06253052, 0)
+scale = Vector2(0.34992492, 0.33500004)
+sprite_frames = SubResource("SpriteFrames_io2eb")
+animation = &"down"
+autoplay = "default"
+
+[node name="FeetHitbox" type="CollisionShape2D" parent="Letha"]
+position = Vector2(8.940697e-07, 51.66666)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_yo0l4")
+
+[node name="HeadHitbox" type="CollisionShape2D" parent="Letha"]
+position = Vector2(0, -8.749996)
+shape = SubResource("CapsuleShape2D_nfdlx")
+
+[node name="Letter_H" type="Area2D" parent="."]
+position = Vector2(1718.0001, 90.00001)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Letter_H"]
+position = Vector2(30.000301, 22.500017)
+texture = ExtResource("10_nfdlx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_H"]
+scale = Vector2(20.04, 20.04)
+shape = SubResource("CircleShape2D_sp7xj")
+
+[node name="Letter_A" type="Area2D" parent="."]
+position = Vector2(36.000004, 979.99994)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Letter_A"]
+texture = ExtResource("11_u0q4c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_A"]
+scale = Vector2(20.04, 20.04)
+shape = SubResource("CircleShape2D_sp7xj")
+
+[node name="Letter_T" type="Area2D" parent="."]
+position = Vector2(2204.9998, 987.99994)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Letter_T"]
+texture = ExtResource("9_yo0l4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_T"]
+scale = Vector2(20.04, 20.04)
+shape = SubResource("CircleShape2D_sp7xj")
+
+[node name="Letter_E" type="Area2D" parent="."]
+position = Vector2(927, 836.00006)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Letter_E"]
+texture = ExtResource("8_io2eb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_E"]
+scale = Vector2(20.04, 20.04)
+shape = SubResource("CircleShape2D_sp7xj")
+
+[node name="TPAreaOne" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TPAreaOne"]
+polygon = PackedVector2Array(2, 908, -9, 908, -8, 1028, 2, 1028)
+
+[node name="TPAreaTwo" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TPAreaTwo"]
+polygon = PackedVector2Array(2356, 909, 2369, 909, 2370, 1025, 2356, 1025)
+
+[node name="FinishPoint" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FinishPoint"]
+polygon = PackedVector2Array(1105, 758, 1262, 758, 1262, 874, 1105, 874)
 
 [node name="WallHitboxes" type="Area2D" parent="."]
 script = ExtResource("2_asnl3")
@@ -271,31 +363,28 @@ polygon = PackedVector2Array(1875, 1329, 2027, 1329, 2027, 1632, 1998, 1632, 199
 [node name="WallGroupThirtyTwo" type="CollisionPolygon2D" parent="WallHitboxes"]
 polygon = PackedVector2Array(1998, 874, 2027, 874, 2027, 1026, 2121, 1026, 2121, 874, 2363, 874, 2363, 910, 2150, 910, 2150, 1026, 2273, 1026, 2273, 1366, 2150, 1366, 2150, 1518, 2121, 1518, 2121, 1329, 2244, 1329, 2244, 1062, 2150, 1062, 2150, 1214, 1875, 1213, 1875, 1178, 2122, 1178, 2122, 1061, 1998, 1061)
 
-[node name="FinishPoint" type="Area2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WallHitboxes"]
+polygon = PackedVector2Array(0, 1062, 0, 1640, 2360, 1640, 2360, 1026, 2371, 1026, 2371, 907, 2360, 907, 2360, 0, 0, 0, 0, 907, -10, 907, -10, 1029, -3, 1029, 0, 1060, -19, 1060, -18, -10, 2402, -27, 2406, 1691, -33, 1680, -19, 1063)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FinishPoint"]
-polygon = PackedVector2Array(1105, 758, 1262, 758, 1262, 874, 1105, 874)
+[node name="LevelFourFinish" parent="." instance=ExtResource("13_nfdlx")]
+visible = false
 
-[node name="Letha" type="CharacterBody2D" parent="."]
-position = Vector2(160, 1115)
-scale = Vector2(0.6, 0.6)
-script = ExtResource("3_8xs88")
-speed = 150
+[node name="FinishPointMarker" type="Label" parent="."]
+visible = false
+offset_left = 1061.0
+offset_top = 791.0
+offset_right = 1303.0
+offset_bottom = 853.0
+theme_override_colors/font_color = Color(0.6509804, 0.24705882, 0.21176471, 1)
+theme_override_fonts/font = ExtResource("8_87pl0")
+theme_override_font_sizes/font_size = 60
+text = "Go Here"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Letha"]
-position = Vector2(-0.06253052, 0)
-scale = Vector2(0.34992492, 0.33500004)
-sprite_frames = SubResource("SpriteFrames_io2eb")
-animation = &"down"
-autoplay = "default"
-
-[node name="FeetHitbox" type="CollisionShape2D" parent="Letha"]
-position = Vector2(8.940697e-07, 51.66666)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_yo0l4")
-
-[node name="HeadHitbox" type="CollisionShape2D" parent="Letha"]
-position = Vector2(0, -8.749996)
-shape = SubResource("CapsuleShape2D_nfdlx")
-
+[connection signal="body_entered" from="Letter_H" to="." method="_on_letter_h_body_entered"]
+[connection signal="body_entered" from="Letter_A" to="." method="_on_letter_a_body_entered"]
+[connection signal="body_entered" from="Letter_T" to="." method="_on_letter_t_body_entered"]
+[connection signal="body_entered" from="Letter_E" to="." method="_on_letter_e_body_entered"]
+[connection signal="body_entered" from="TPAreaOne" to="." method="_on_tp_area_one_body_entered"]
+[connection signal="body_entered" from="TPAreaTwo" to="." method="_on_tp_area_two_body_entered"]
+[connection signal="body_entered" from="FinishPoint" to="." method="_on_finish_point_body_entered"]
 [connection signal="body_entered" from="WallHitboxes" to="WallHitboxes" method="_on_body_entered"]

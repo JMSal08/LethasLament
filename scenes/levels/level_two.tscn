@@ -390,25 +390,6 @@ position = Vector2(-10.000406, -50)
 scale = Vector2(20.04, 20.04)
 shape = SubResource("CircleShape2D_yr121")
 
-[node name="LevelTwoFinish" parent="." instance=ExtResource("12_oei0b")]
-visible = false
-
-[node name="FinishPoint" type="Area2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FinishPoint"]
-polygon = PackedVector2Array(1069, 729, 1327, 729, 1327, 911, 1069, 910)
-
-[node name="TPAreaOne" type="Area2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TPAreaOne"]
-polygon = PackedVector2Array(4, 669, 4, 971, -34, 970, -25, 670)
-
-[node name="TPAreaTwo" type="Area2D" parent="."]
-position = Vector2(2375, 26)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TPAreaTwo"]
-polygon = PackedVector2Array(4, 669, 4, 971, -34, 970, -25, 670)
-
 [node name="SpeechBox" type="Panel" parent="."]
 visible = false
 offset_left = 316.0
@@ -432,6 +413,25 @@ offset_bottom = 171.0
 theme_override_fonts/font = ExtResource("14_iuav1")
 theme_override_font_sizes/font_size = 72
 horizontal_alignment = 1
+
+[node name="LevelTwoFinish" parent="." instance=ExtResource("12_oei0b")]
+visible = false
+
+[node name="FinishPoint" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FinishPoint"]
+polygon = PackedVector2Array(1069, 729, 1327, 729, 1327, 911, 1069, 910)
+
+[node name="TPAreaOne" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TPAreaOne"]
+polygon = PackedVector2Array(4, 669, 4, 971, -34, 970, -25, 670)
+
+[node name="TPAreaTwo" type="Area2D" parent="."]
+position = Vector2(2375, 26)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TPAreaTwo"]
+polygon = PackedVector2Array(4, 669, 4, 971, -34, 970, -25, 670)
 
 [node name="FinishPointMarker" type="Label" parent="."]
 visible = false

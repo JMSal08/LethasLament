@@ -1,0 +1,111 @@
+[gd_scene load_steps=11 format=3 uid="uid://ddpv6csw1thg"]
+
+[ext_resource type="Script" uid="uid://bli45qy61oaaj" path="res://scripts/levels/level_four/level_four_finish.gd" id="1_6pkka"]
+[ext_resource type="Texture2D" uid="uid://d2i4difpj63ux" path="res://assets/levels/level_four/images/level4.png" id="1_jcvcf"]
+[ext_resource type="Texture2D" uid="uid://blgsyj48ruit3" path="res://assets/levels/level_one/images/Cat_lvl1.png" id="2_w1mdl"]
+[ext_resource type="PackedScene" uid="uid://dd16j3wotjuev" path="res://scenes/misc/slot.tscn" id="3_u6q7w"]
+[ext_resource type="Texture2D" uid="uid://cf67d6gir764i" path="res://assets/letters/E.png" id="4_txvlv"]
+[ext_resource type="Texture2D" uid="uid://dxxch5offxc4n" path="res://assets/letters/H.png" id="5_dcctg"]
+[ext_resource type="Texture2D" uid="uid://co0ngm2gkv3yo" path="res://assets/letters/T.png" id="6_6pkka"]
+[ext_resource type="Texture2D" uid="uid://d18kv5dr0oe1r" path="res://assets/letters/A.png" id="7_b72x3"]
+[ext_resource type="FontFile" uid="uid://celc3h3f87gce" path="res://fonts/Super Joyful.ttf" id="8_dcctg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1tl7v"]
+texture = ExtResource("1_jcvcf")
+
+[node name="LevelFourFinish" type="Node2D"]
+script = ExtResource("1_6pkka")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 2360.0
+offset_bottom = 1640.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1tl7v")
+
+[node name="Picture" type="TextureRect" parent="."]
+offset_left = 329.99997
+offset_top = 227.99998
+offset_right = 5258.0
+offset_bottom = 3492.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_w1mdl")
+
+[node name="Letter_E" parent="." instance=ExtResource("3_u6q7w")]
+offset_left = 1700.0
+offset_top = 65.0
+offset_right = 1800.0
+offset_bottom = 165.0
+scale = Vector2(3, 3)
+texture = ExtResource("4_txvlv")
+
+[node name="Letter_H" parent="." instance=ExtResource("3_u6q7w")]
+offset_left = 1700.0
+offset_top = 465.0
+offset_right = 1800.0
+offset_bottom = 565.0
+scale = Vector2(3, 3)
+texture = ExtResource("5_dcctg")
+
+[node name="Letter_T" parent="." instance=ExtResource("3_u6q7w")]
+offset_left = 1700.0
+offset_top = 865.0
+offset_right = 1800.0
+offset_bottom = 965.0
+scale = Vector2(3, 3)
+texture = ExtResource("6_6pkka")
+
+[node name="Letter_A" parent="." instance=ExtResource("3_u6q7w")]
+offset_left = 1700.0
+offset_top = 1265.0
+offset_right = 1800.0
+offset_bottom = 1365.0
+scale = Vector2(3, 3)
+texture = ExtResource("7_b72x3")
+
+[node name="SlotOne" parent="." instance=ExtResource("3_u6q7w")]
+offset_left = 65.0
+offset_top = 1100.0
+offset_right = 165.0
+offset_bottom = 1200.0
+scale = Vector2(3, 3)
+
+[node name="SlotTwo" parent="." instance=ExtResource("3_u6q7w")]
+offset_left = 465.0
+offset_top = 1100.0
+offset_right = 565.0
+offset_bottom = 1200.0
+scale = Vector2(3, 3)
+
+[node name="SlotThree" parent="." instance=ExtResource("3_u6q7w")]
+offset_left = 865.0
+offset_top = 1100.0
+offset_right = 965.0
+offset_bottom = 1200.0
+scale = Vector2(3, 3)
+
+[node name="SlotFour" parent="." instance=ExtResource("3_u6q7w")]
+offset_left = 1265.0
+offset_top = 1100.0
+offset_right = 1365.0
+offset_bottom = 1200.0
+scale = Vector2(3, 3)
+
+[node name="AnswerButton" type="Button" parent="."]
+offset_left = 1110.0
+offset_top = 1504.0
+offset_right = 1334.0
+offset_bottom = 1599.0
+theme_override_fonts/font = ExtResource("8_dcctg")
+theme_override_font_sizes/font_size = 72
+text = "Answer"
+
+[node name="ResetButton" type="Button" parent="."]
+offset_left = 340.0
+offset_top = 1506.0
+offset_right = 505.0
+offset_bottom = 1601.0
+theme_override_fonts/font = ExtResource("8_dcctg")
+theme_override_font_sizes/font_size = 72
+text = "Reset"
+
+[connection signal="pressed" from="AnswerButton" to="." method="_on_answer_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]

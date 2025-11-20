@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf67d6gir764i"
-path="res://.godot/imported/E.png-420abb98afed8ccf0feacb0113993838.ctex"
+uid="uid://d4cx4owtii4fd"
+path="res://.godot/imported/hate.png-b49f9cc0113be552f18bd88b0f3f9fa4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/letters/E.png"
-dest_files=["res://.godot/imported/E.png-420abb98afed8ccf0feacb0113993838.ctex"]
+source_file="res://assets/misc/hate.png"
+dest_files=["res://.godot/imported/hate.png-b49f9cc0113be552f18bd88b0f3f9fa4.ctex"]
 
 [params]
 

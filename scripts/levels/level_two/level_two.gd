@@ -24,23 +24,25 @@ func _process(_delta: float) -> void:
 func _on_wall_hitboxes_body_entered(_body: Node2D) -> void:
 	wall_touches += 1
 	print(wall_touches)
-	if wall_touches == 3:
-		print("3 commenced")
+	if wall_touches == 1:
+		print("1 commenced")
 		Warning.text = "I shouldn't touch the walls..."
 		SpeechBox.show()
 		await get_tree().create_timer(3).timeout
 		SpeechBox.hide()
-		Warning.text = ""
-	elif wall_touches == 5:
-		Warning.text = "I seriously shouldn't."
+	elif wall_touches == 2:
+		Warning.text = "I really shouldn't touch this."
 		SpeechBox.show()
 		await get_tree().create_timer(3).timeout
 		SpeechBox.hide()
-	elif wall_touches >= 7:
+	elif wall_touches == 3:
 		Warning.text = "..."
 		SpeechBox.show()
 		await get_tree().create_timer(3).timeout
 		SpeechBox.hide()
+	elif wall_touches == 4:
+		LevelCounter.change_current_level(2)
+		TransitionScene.change_scene_to_file("res://scenes/game_over.tscn")
 
 func _on_letter_d_body_entered(_body: Node2D) -> void:
 	has_D = true

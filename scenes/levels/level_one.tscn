@@ -211,8 +211,8 @@ script = ExtResource("2_63ct5")
 position = Vector2(-0.0625061, 0)
 scale = Vector2(0.34992492, 0.335)
 sprite_frames = SubResource("SpriteFrames_8ri5e")
-animation = &"down"
 autoplay = "default"
+frame_progress = 0.2883054
 
 [node name="FeetHitbox" type="CollisionShape2D" parent="Letha"]
 position = Vector2(8.940697e-07, 51.249992)

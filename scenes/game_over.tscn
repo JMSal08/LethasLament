@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://dn1mywfdxd6ty"]
+
+[ext_resource type="Script" uid="uid://b7iqsi0s0uh3i" path="res://scripts/misc/game_over.gd" id="1_racf3"]
+[ext_resource type="Texture2D" uid="uid://d4cx4owtii4fd" path="res://assets/misc/hate.png" id="1_wqhvx"]
+[ext_resource type="FontFile" uid="uid://cppm2tf24r5fa" path="res://fonts/Zombies Brainless.otf" id="2_tbwuq"]
+[ext_resource type="FontFile" uid="uid://cop50paopfx11" path="res://fonts/Saphifen.otf" id="3_tbwuq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_racf3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbwuq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7m3ot"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3hpu"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_racf3")
+
+[node name="Bg" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 2360.0
+offset_bottom = 1640.0
+color = Color(0.06469653, 0.06469653, 0.06469653, 1)
+
+[node name="HeartImg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 300.0
+offset_right = 2643.0
+offset_bottom = 1476.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_wqhvx")
+
+[node name="GameOverLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 93.0
+offset_right = 1749.0
+offset_bottom = 416.0
+theme_override_colors/font_color = Color(0.44862717, 0.060888633, 0.07851098, 1)
+theme_override_fonts/font = ExtResource("2_tbwuq")
+theme_override_font_sizes/font_size = 300
+text = "Game Over"
+
+[node name="RetryButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 899.0
+offset_top = 1315.0
+offset_right = 1475.0
+offset_bottom = 1537.0
+theme_override_fonts/font = ExtResource("3_tbwuq")
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxEmpty_racf3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tbwuq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7m3ot")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v3hpu")
+text = "Retry"
+
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]

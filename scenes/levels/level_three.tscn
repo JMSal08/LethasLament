@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d27p1lwllw2u5" path="res://assets/letters/O.png" id="7_7ry6i"]
 [ext_resource type="Texture2D" uid="uid://bs3nv8ht1a1pp" path="res://assets/sprites/right_spritesheet.png" id="7_h2uyl"]
 [ext_resource type="Texture2D" uid="uid://biljtxddthxsx" path="res://assets/letters/V.png" id="8_vmov0"]
-[ext_resource type="Texture2D" uid="uid://b611lxeo3pktf" path="res://assets/letters/E.png" id="9_7s1bx"]
+[ext_resource type="Texture2D" uid="uid://cf67d6gir764i" path="res://assets/letters/E.png" id="9_7s1bx"]
 [ext_resource type="FontFile" uid="uid://dxk76a2ryw1iv" path="res://fonts/Bigbesty.otf" id="11_s458d"]
 [ext_resource type="PackedScene" uid="uid://clmxnnr7kp8gy" path="res://scenes/misc/level_three_finish.tscn" id="12_31lil"]
 
@@ -331,7 +331,7 @@ position = Vector2(2030, 1571)
 scale = Vector2(0.4, 0.4)
 
 [node name="Sprite2D" type="Sprite2D" parent="Letter_E"]
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("9_7s1bx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Letter_E"]

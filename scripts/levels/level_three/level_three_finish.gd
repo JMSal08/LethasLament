@@ -21,8 +21,8 @@ func _on_answer_button_pressed() -> void:
 			if SlotThree.texture == V_Texture:
 				if SlotFour.texture == E_Texture:
 					print("pass")
-					AudioPlayer.playLevelThree()
-					TransitionScene.change_scene_to_file("res://scenes/levels/level_three.tscn")
+					AudioPlayer.playLevelFour()
+					TransitionScene.change_scene_to_file("res://scenes/levels/level_four.tscn")
 
 func _on_reset_button_pressed() -> void:
 	SlotOne.texture = null
