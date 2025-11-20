@@ -321,7 +321,6 @@ target_loc = Vector2(36, 44)
 polygon = PackedVector2Array(0, 1640, 2360, 1640, 2360, 0, 0, 0, 0, 1637, -2, 1637, -2, -2, 2361, -2, 2362, 1644, -2, 1643, -2, 1637, 0, 1637)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(2359.9, -0.3999939)

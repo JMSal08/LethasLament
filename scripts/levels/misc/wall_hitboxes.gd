@@ -5,5 +5,5 @@ extends Area2D
 @onready var letha = $"../Letha"
 func _on_body_entered(_body: Node2D) -> void:
 	print("Body Entered")
-	letha.global_position = target_loc
+	# letha.global_position = target_loc
 	pass
